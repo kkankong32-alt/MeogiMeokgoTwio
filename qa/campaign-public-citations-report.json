@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-04T13:37:09.783Z",
+  "version": "1.0.1",
+  "teacherTabs": [
+    "단원 활동",
+    "선택 질문 A–F",
+    "게임 기록",
+    "용어",
+    "교사 안내"
+  ],
+  "urlFieldsRequired": false,
+  "anchorLinksRequired": false,
+  "citations": "Publisher/title/printed pages retained as text",
+  "passed": true
+}

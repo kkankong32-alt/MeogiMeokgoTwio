@@ -1,0 +1,347 @@
+{
+  "method": "@napi-rs/canvas rendering through shipping createRenderer with all actual image assets. Simulation/control snapshots; not browser DOM/CSS screenshots.",
+  "shots": [
+    {
+      "name": "desktop-frog-start",
+      "width": 960,
+      "height": 540,
+      "stage": 1,
+      "role": "frog",
+      "status": "playing",
+      "time": 0,
+      "state": "idle",
+      "eaten": 0,
+      "predator": "patrol",
+      "bounds": {
+        "left": 148,
+        "top": 308.06451612903226,
+        "right": 1092,
+        "bottom": 1153.225806451613,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "desktop-tongue",
+      "width": 960,
+      "height": 540,
+      "stage": 1,
+      "role": "frog",
+      "status": "playing",
+      "time": 0.41666666666666663,
+      "state": "eating",
+      "eaten": 0,
+      "predator": "patrol",
+      "bounds": {
+        "left": 148,
+        "top": 308.06451612903226,
+        "right": 1092,
+        "bottom": 1153.225806451613,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "desktop-grasshopper-forage",
+      "width": 960,
+      "height": 540,
+      "stage": 2,
+      "role": "grasshopper",
+      "status": "playing",
+      "time": 0.49999999999999994,
+      "state": "grazing",
+      "eaten": 0,
+      "predator": "patrol",
+      "bounds": {
+        "left": 8,
+        "top": 58.064516129032256,
+        "right": 952,
+        "bottom": 903.2258064516129,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "desktop-actual-jump",
+      "width": 960,
+      "height": 540,
+      "stage": 1,
+      "role": "frog",
+      "status": "playing",
+      "time": 0.8166666666666675,
+      "state": "jumping",
+      "eaten": 0,
+      "predator": "patrol",
+      "bounds": {
+        "left": 220.2023847530687,
+        "top": 308.06451612903226,
+        "right": 1164.2023847530686,
+        "bottom": 1153.225806451613,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "portrait-frog-start",
+      "width": 390,
+      "height": 448,
+      "stage": 1,
+      "role": "frog",
+      "status": "playing",
+      "time": 0,
+      "state": "idle",
+      "eaten": 0,
+      "predator": "patrol",
+      "bounds": {
+        "left": 361.2053571428571,
+        "top": 248.5023041474654,
+        "right": 878.7946428571429,
+        "bottom": 1212.7880184331798,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "portrait-tongue",
+      "width": 390,
+      "height": 448,
+      "stage": 1,
+      "role": "frog",
+      "status": "playing",
+      "time": 0.41666666666666663,
+      "state": "eating",
+      "eaten": 0,
+      "predator": "patrol",
+      "bounds": {
+        "left": 361.2053571428571,
+        "top": 248.5023041474654,
+        "right": 878.7946428571429,
+        "bottom": 1212.7880184331798,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "portrait-grasshopper-forage",
+      "width": 390,
+      "height": 448,
+      "stage": 2,
+      "role": "grasshopper",
+      "status": "playing",
+      "time": 0.49999999999999994,
+      "state": "grazing",
+      "eaten": 0,
+      "predator": "patrol",
+      "bounds": {
+        "left": 181.2053571428571,
+        "top": 17.857142857142833,
+        "right": 698.7946428571429,
+        "bottom": 982.1428571428571,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "portrait-actual-jump",
+      "width": 390,
+      "height": 448,
+      "stage": 1,
+      "role": "frog",
+      "status": "playing",
+      "time": 0.8166666666666675,
+      "state": "jumping",
+      "eaten": 0,
+      "predator": "patrol",
+      "bounds": {
+        "left": 433.4077418959258,
+        "top": 248.5023041474654,
+        "right": 950.9970276102116,
+        "bottom": 1212.7880184331798,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "shortlandscape-frog-start",
+      "width": 700,
+      "height": 260,
+      "stage": 1,
+      "role": "frog",
+      "status": "playing",
+      "time": 0,
+      "state": "idle",
+      "eaten": 0,
+      "predator": "patrol",
+      "bounds": {
+        "left": 150.97142857142853,
+        "top": 460.7834101382488,
+        "right": 1089.0285714285715,
+        "bottom": 1000.5069124423962,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "shortlandscape-tongue",
+      "width": 700,
+      "height": 260,
+      "stage": 1,
+      "role": "frog",
+      "status": "playing",
+      "time": 0.41666666666666663,
+      "state": "eating",
+      "eaten": 0,
+      "predator": "patrol",
+      "bounds": {
+        "left": 150.97142857142853,
+        "top": 460.7834101382488,
+        "right": 1089.0285714285715,
+        "bottom": 1000.5069124423962,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "shortlandscape-grasshopper-forage",
+      "width": 700,
+      "height": 260,
+      "stage": 2,
+      "role": "grasshopper",
+      "status": "playing",
+      "time": 0.49999999999999994,
+      "state": "grazing",
+      "eaten": 0,
+      "predator": "patrol",
+      "bounds": {
+        "left": 10.971428571428532,
+        "top": 210.78341013824883,
+        "right": 949.0285714285715,
+        "bottom": 750.5069124423962,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "shortlandscape-actual-jump",
+      "width": 700,
+      "height": 260,
+      "stage": 1,
+      "role": "frog",
+      "status": "playing",
+      "time": 0.8166666666666675,
+      "state": "jumping",
+      "eaten": 0,
+      "predator": "patrol",
+      "bounds": {
+        "left": 223.17381332449725,
+        "top": 460.7834101382488,
+        "right": 1161.23095618164,
+        "bottom": 1000.5069124423962,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "desktop-live-warning",
+      "width": 960,
+      "height": 540,
+      "stage": 2,
+      "role": "grasshopper",
+      "status": "playing",
+      "time": 8.349999999999994,
+      "state": "moving",
+      "eaten": 4,
+      "predator": "windup",
+      "bounds": {
+        "left": 270.74489935039105,
+        "top": 317.5601441436532,
+        "right": 1214.744899350391,
+        "bottom": 1162.7214344662339,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "desktop-live-jump",
+      "width": 960,
+      "height": 540,
+      "stage": 2,
+      "role": "grasshopper",
+      "status": "playing",
+      "time": 9.516666666666719,
+      "state": "jumping",
+      "eaten": 4,
+      "predator": "windup",
+      "bounds": {
+        "left": 270.74489935039105,
+        "top": 285.2470211441104,
+        "right": 1214.744899350391,
+        "bottom": 1130.408311466691,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "desktop-live-goal",
+      "width": 960,
+      "height": 540,
+      "stage": 2,
+      "role": "grasshopper",
+      "status": "playing",
+      "time": 15.50000000000035,
+      "state": "grazing",
+      "eaten": 6,
+      "predator": "recover",
+      "bounds": {
+        "left": 278.8884634343941,
+        "top": 311.5289730797397,
+        "right": 1222.888463434394,
+        "bottom": 1156.6902634023204,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "desktop-live-success",
+      "width": 960,
+      "height": 540,
+      "stage": 2,
+      "role": "grasshopper",
+      "status": "success",
+      "time": 23.33333333333329,
+      "state": "idle",
+      "eaten": 6,
+      "predator": "recover",
+      "bounds": {
+        "left": 720,
+        "top": 463.00448121439814,
+        "right": 1664,
+        "bottom": 1308.1657715369788,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "portrait-actual-warning",
+      "width": 390,
+      "height": 448,
+      "stage": 2,
+      "role": "grasshopper",
+      "status": "playing",
+      "time": 8.349999999999994,
+      "state": "moving",
+      "eaten": 4,
+      "predator": "windup",
+      "bounds": {
+        "left": 483.95025649324816,
+        "top": 257.99793216208633,
+        "right": 1001.5395422075339,
+        "bottom": 1222.2836464478007,
+        "exclusions": []
+      }
+    },
+    {
+      "name": "shortlandscape-actual-warning",
+      "width": 700,
+      "height": 260,
+      "stage": 2,
+      "role": "grasshopper",
+      "status": "playing",
+      "time": 11.716666666666828,
+      "state": "moving",
+      "eaten": 6,
+      "predator": "windup",
+      "bounds": {
+        "left": 406.59984156285805,
+        "top": 519.0059180680453,
+        "right": 1344.656984420001,
+        "bottom": 1058.7294203721929,
+        "exclusions": []
+      }
+    }
+  ]
+}

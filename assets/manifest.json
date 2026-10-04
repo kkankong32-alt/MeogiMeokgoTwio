@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "projectLabel": "생태 게임 제작",
+  "gameTitle": "먹이 먹고 튀어",
+  "status": "campaign-release-candidate",
+  "runtimeAssets": [
+    {
+      "id": "entry-title-v03",
+      "path": "assets/title/entry-v03.png",
+      "type": "title-screen",
+      "width": 1664,
+      "height": 936,
+      "bytes": 2656526,
+      "status": "runtime-approved",
+      "approvalScope": "Entry screen v03 only; not creature or environment runtime art",
+      "provenance": "User-approved generated title v03",
+      "usageConditions": "Created for this ecology game; original image bytes preserved. Included in the user-authorized game release. No additional stock-media license or paid music is required by the asset record.",
+      "buttonNormalized": {
+        "left": 0.31851,
+        "top": 0.76816,
+        "width": 0.35697,
+        "height": 0.14637
+      },
+      "sha256": "a8c9e3df3c03b1e1ba217a9c648d439a3850342db114f950a764ab34c08b5ce4"
+    },
+    {
+      "id": "frog-atlas-v03",
+      "path": "assets/frog/frog-atlas-runtime-crop-draft.lossless.webp",
+      "type": "frog-rigid-parts",
+      "width": 1997,
+      "height": 1944,
+      "bytes": 2523718,
+      "sha256": "e7db566e504d5b4942644a11fea732df36a0d8484b0a588d641a5a1a880d9224",
+      "status": "runtime-approved",
+      "approvalScope": "User approved v03 jump and v10 tongue on 2026-10-04. Same rigid source pixels and approved source timing; atlas packing is a lossless technical representation. Gameplay/device performance is not approved by this motion approval.",
+      "provenance": "Original generated fixed raster art; frozen v03 and v10 review sources.",
+      "usageConditions": "Created for this ecology game; original image bytes preserved. Included in the user-authorized game release. No additional stock-media license or paid music is required by the asset record."
+    },
+    {
+      "id": "frog-tongue-v10",
+      "path": "assets/frog/tongue-ribbon.png",
+      "type": "tongue-source",
+      "width": 512,
+      "height": 128,
+      "bytes": 22975,
+      "sha256": "d17b85d6d85c35409413f5b0437d2730bed2070fdfe47f2822237cc476a4e5f0",
+      "status": "runtime-approved",
+      "approvalScope": "User approved v03 jump and v10 tongue on 2026-10-04. Same rigid source pixels and approved source timing; atlas packing is a lossless technical representation. Gameplay/device performance is not approved by this motion approval.",
+      "provenance": "Original generated fixed raster art; frozen v03 and v10 review sources.",
+      "usageConditions": "Created for this ecology game; original image bytes preserved. Included in the user-authorized game release. No additional stock-media license or paid music is required by the asset record."
+    },
+    {
+      "id": "frog-mouth-cavity",
+      "path": "assets/frog/mouth-interior.png",
+      "type": "mouth-cavity-source",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 300725,
+      "sha256": "58f83adc9d34af5b76f65c0715f8d347dcc8458e904515a6a0ba401571cd441a",
+      "status": "runtime-approved",
+      "approvalScope": "User approved v03 jump and v10 tongue on 2026-10-04. Same rigid source pixels and approved source timing; atlas packing is a lossless technical representation. Gameplay/device performance is not approved by this motion approval.",
+      "provenance": "Original generated fixed raster art; frozen v03 and v10 review sources.",
+      "usageConditions": "Created for this ecology game; original image bytes preserved. Included in the user-authorized game release. No additional stock-media license or paid music is required by the asset record."
+    }
+  ],
+  "notes": [
+    "Title v03 original pixels retained with an accessible DOM Start button.",
+    "Frog v03 and tongue v10 source rig math and frozen authored timing retained.",
+    "Grasshopper v05 1.7x size and snake v06 source pixels retained.",
+    "Only authored left/right creature art is used, with 2D ground movement and camera projection.",
+    "Background and world collision use the same source-pixel coordinates.",
+    "Asset-origin records do not claim child usability, browser/device FPS, or learning-effect validation."
+  ],
+  "requirements": {
+    "entryKeyArt": {
+      "status": "approved-v03",
+      "textPolicy": "Approved baked title kept as artwork; accessible DOM label and actual button provided."
+    },
+    "frogSheets": {
+      "status": "approved-rigid-atlas-v03-v10-integrated",
+      "format": "13 fixed crop parts, exact base transforms/joints/draw order; no sprite-sheet cell assumptions"
+    },
+    "grasshopperSheets": {
+      "status": "rigged-source-used-for-player-and-prey"
+    },
+    "snakeSheets": {
+      "status": "v06-rig-integrated"
+    },
+    "environmentLayers": {
+      "status": "pilot-candidate",
+      "layers": [
+        "ground",
+        "water",
+        "props",
+        "foreground"
+      ]
+    }
+  },
+  "developmentAssets": [
+    {
+      "id": "zone01-ground",
+      "path": "assets/environment/zone01-ground-v01.png",
+      "type": "environment",
+      "width": 1672,
+      "height": 941,
+      "bytes": 3330214,
+      "sha256": "03cd5682ea38fb4ed822cc9a6816907018f8134da73376a037a71fdaddee3153",
+      "status": "pilot-review-candidate",
+      "approvalScope": "Authorized pilot integration with current background and static prey; no separate final art/device-performance approval claimed.",
+      "provenance": "Original generated runtime-batch-v01 art, visually reviewed on the actual pilot canvas.",
+      "usageConditions": "Created for this ecology game; original image bytes preserved. Included in the user-authorized game release. No additional stock-media license or paid music is required by the asset record."
+    },
+    {
+      "id": "grasshopper-static",
+      "path": "assets/prey/grasshopper-v01.png",
+      "type": "prey-static",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1246745,
+      "sha256": "eb1ade1e3c16364ba21c29bfc699136f94b65558fc1bd318c8c33ec6bdd2aa71",
+      "status": "pilot-review-candidate",
+      "approvalScope": "User accepted the v05 prey appearance and 1.7x size on 2026-10-04. Preserve this visual scope; no actual-device-performance approval claimed.",
+      "provenance": "Original generated runtime-batch-v01 art, visually reviewed on the actual pilot canvas.",
+      "usageConditions": "Created for this ecology game; original image bytes preserved. Included in the user-authorized game release. No additional stock-media license or paid music is required by the asset record."
+    },
+    {
+      "id": "snake-raster-v01",
+      "path": "assets/predator/snake-v01.png",
+      "type": "predator-raster",
+      "width": 2172,
+      "height": 724,
+      "bytes": 544803,
+      "sha256": "fab4433b45a1f0825bc99b77e3a5756efa78384300fe559cb7e02a0f6d87cfb4",
+      "status": "pilot-review-candidate",
+      "approvalScope": "Unchanged original raster mapped as long 1100-unit near-uniform 44px torso with measured alpha-width normalization and torso UV repeat. Terminal taper only. Head-only gameplay collision. Awaiting v06 visual approval.",
+      "provenance": "Generated golden olive snake source from prey-predator-v01; source SHA256 fab4433b45a1f0825bc99b77e3a5756efa78384300fe559cb7e02a0f6d87cfb4",
+      "usageConditions": "Created for this ecology game; original image bytes preserved. Included in the user-authorized game release. No additional stock-media license or paid music is required by the asset record."
+    },
+    {
+      "id": "snake-head-dorsal-v01",
+      "path": "assets/predator/snake-head-dorsal-v01.png",
+      "type": "predator-head-raster",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1629577,
+      "sha256": "b5f6b248b3b364963dac3f1b90b600747600d5baf4b380128be4e428870ed1a7",
+      "status": "pilot-review-candidate",
+      "approvalScope": "Existing dorsal head raster retained; independently scaled to .105 with x940 crop for near-uniform body connection. Continuous rotation, no heading sign flip. Awaiting v06 visual approval.",
+      "provenance": "Imagegen authored 2026-10-04 using golden snake v01 source reference. No original source raster overwritten.",
+      "usageConditions": "Created for this ecology game; original image bytes preserved. Included in the user-authorized game release. No additional stock-media license or paid music is required by the asset record."
+    }
+  ],
+  "candidateNotes": "Complete six-stage campaign adds game rules, destination/grass/route rendering and optional teacher activities. Original generated image pixels and approved rig source hashes are unchanged.",
+  "releaseAuthorization": "Public repository and GitHub Pages publication authorized for this completed game on 2026-10-04. Existing image approval scopes remain distinct from device testing."
+}

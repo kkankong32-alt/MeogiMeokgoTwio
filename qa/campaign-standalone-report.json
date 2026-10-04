@@ -1,0 +1,14 @@
+{
+  "method": "Exact play-offline.html classic script executed by node:vm with mocked DOM/RAF/Canvas calls and embedded assets decoded by native image library. Browser file:// policy and physical UI not tested.",
+  "sha256": "9f3288238749a414fa08cd6003233c99d334997b5fbaf4b5e6b429664e987c18",
+  "bytes": 16601318,
+  "passed": [
+    "bundle executes",
+    "embedded images decode",
+    "start intro opens",
+    "game starts",
+    "real keyboard input consumes food",
+    "optional teacher opens and closes"
+  ],
+  "networkRequired": false
+}

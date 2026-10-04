@@ -1,0 +1,112 @@
+{
+  "type": "single-HTML classic-script build; all same source art embedded unchanged",
+  "bytes": 16601318,
+  "modules": [
+    {
+      "path": "src/vendor/rig-math.mjs",
+      "sha256": "9684ae8ae49ba362b4e21c3fbd12ab586073e40df97e6278abab7fbefab4ec51"
+    },
+    {
+      "path": "src/vendor/full-motion/full-rig.mjs",
+      "sha256": "af23eccefe6178dfb6d80505b5649987034e78cf7956bafbc490f235e4e586ca"
+    },
+    {
+      "path": "src/vendor/big-leap-proof/v02/big-leap-v02.mjs",
+      "sha256": "f28725a7994743dcf1bd0b5c0bd26eeafa54ecb803423eab8274cb6a04d729e2"
+    },
+    {
+      "path": "src/vendor/big-leap-proof/v03/big-leap-v03.mjs",
+      "sha256": "ecb7c3a427be7565b697de2247decc69df4f3bebc75d93373767be8f508c4b32"
+    },
+    {
+      "path": "src/vendor/tongue-v10.mjs",
+      "sha256": "91372ef3dfdc99da09ce5033eba31ad5e09bd909429cd70160ba2562cd7d12ba"
+    },
+    {
+      "path": "src/tongue-gameplay.js",
+      "sha256": "4815f8abfbadf346a822b74d6b3a365815464ac4c842d7202c9df1bfdb420d19"
+    },
+    {
+      "path": "src/frog-registration.js",
+      "sha256": "8513a92f74e0568c84e42f886605eff4814980a43e1f0a9420813ab621c2b7d2"
+    },
+    {
+      "path": "src/motion.js",
+      "sha256": "322be9a6bacf72de84ba783a921b826d8a06426b1f96e9450420a1b51d7f87ef"
+    },
+    {
+      "path": "src/navigation.js",
+      "sha256": "f6ac10a6b7e37151f6bd53b12b6418069259c1ec55ab1a1fedf8584040a4de88"
+    },
+    {
+      "path": "src/campaign.js",
+      "sha256": "1fb8112fece088fa30f0398ebc1272dc878a225669e4f6b921e55fcd8e9fbdef"
+    },
+    {
+      "path": "src/locomotion.js",
+      "sha256": "9a9c90fb21e0af475a84afd6d18b55d6c95e89d0ce12657f112fd5bfdb283c43"
+    },
+    {
+      "path": "src/fauna/prey-behavior.mjs",
+      "sha256": "4f7dfdd69c4e46146e5c739a59f75249c878cf54a674a79eb4e33c9a85cabc7c"
+    },
+    {
+      "path": "src/fauna/snake-rig.mjs",
+      "sha256": "00561f223b26d9d559c8396ca9275895bdffecdb9c1dfd960ade37e6b5ce0298"
+    },
+    {
+      "path": "src/core.js",
+      "sha256": "2462517a63be871739fb4331a7ed81f65d81a1f2da75d6b3c701a40caad2e449"
+    },
+    {
+      "path": "src/viewport.js",
+      "sha256": "f6eafb77b370e99dbc4feb2d72795790e326b0d4e9a377d270fdeaa07b688d86"
+    },
+    {
+      "path": "src/fauna/grasshopper-rig.mjs",
+      "sha256": "a70924eabb084d511511bbeb74985c47ebb50a8f11cb13a20bee6dfe8ab012c6"
+    },
+    {
+      "path": "src/creatures.js",
+      "sha256": "eb0518e7e01cd9a8f60e217545c49b12591dcd002c0c469f2de46ed0ccdeeaa3"
+    },
+    {
+      "path": "src/render.js",
+      "sha256": "81d803e14612317131dedeb64e73e8410ec6614e6eecd74c6daa6497ea0195fd"
+    },
+    {
+      "path": "src/input.js",
+      "sha256": "3baf07e955ea4e4227bb0bd222cecc118c6af1bb61e6f30de3d45f06316978fe"
+    },
+    {
+      "path": "src/lifecycle.js",
+      "sha256": "61c005b6bd2d5d706b4b3bc988201afea3c0ecc9616173ed603b82d53ac4d9b2"
+    },
+    {
+      "path": "src/assets.js",
+      "sha256": "0c75ea50270c1e328effe5ac85208259cf466260df4caa391df1e4b25218005c"
+    },
+    {
+      "path": "src/learning.js",
+      "sha256": "9179084ec54ada45b428929d1b7e76f22cfb88e88d9251d223c47fd442c2dd02"
+    },
+    {
+      "path": "src/storage.js",
+      "sha256": "dee0bfc553a1eb7ea179d449d02a2f2d9d5685cd1392adca188b0c9b5e9b0693"
+    },
+    {
+      "path": "src/audio.js",
+      "sha256": "e9642af8f4694af46b398d4208fe785e09289349815683c06fb63129c16cb4b9"
+    },
+    {
+      "path": "src/recap.js",
+      "sha256": "c72fd3a6ffd7221f7ec8765d3ebfa73332c06b68ea6d5b28e21ec5de41ce31d9"
+    },
+    {
+      "path": "src/main.js",
+      "sha256": "d3918f7be305242addc9cbcda249ed6fd00b17781d9cc21af0dac5ffbdd990d6"
+    }
+  ],
+  "sha256": "9f3288238749a414fa08cd6003233c99d334997b5fbaf4b5e6b429664e987c18",
+  "networkRequestsRequired": false
+}

@@ -1,0 +1,7 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> eat-and-escape@1.0.1 check
+> node scripts/check-assets.js && node scripts/check-source.js
+
+Manifest valid. 4 approved image assets and 4 disclosed pilot candidates. Art gate: campaign-release-candidate.
+Syntax valid: 46 source/check/test files. Offline HTML has inline scripts, CSS and image assets.

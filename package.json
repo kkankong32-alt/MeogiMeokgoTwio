@@ -1,0 +1,18 @@
+{
+  "name": "eat-and-escape",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Six-stage offline ecology action game with two playable roles and independent optional teacher activities.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check-assets.js && node scripts/check-source.js",
+    "start": "python3 -m http.server 4781 --bind 0.0.0.0",
+    "build": "node scripts/build-standalone.js",
+    "test:replay": "node qa/campaign-replay.mjs",
+    "test:render": "node qa/campaign-render.mjs"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "0.1.100"
+  }
+}

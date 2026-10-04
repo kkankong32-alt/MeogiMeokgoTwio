@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-10-04T17:54:40.955Z",
+  "version": "1.0.1",
+  "mockedDom": true,
+  "failureMessageHonest": true,
+  "failurePreservesLiveState": true,
+  "successAfterRetryClearsRecords": true
+}

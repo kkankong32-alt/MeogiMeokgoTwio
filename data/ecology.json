@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "arrowDirection": "food-to-eater",
+  "speciesStatus": "generalized textbook roles, not a particular species or locality",
+  "actionModel": {
+    "source": "textbook printed page49",
+    "edges": [
+      [
+        "grass",
+        "grasshopper"
+      ],
+      [
+        "grasshopper",
+        "frog"
+      ],
+      [
+        "caterpillar",
+        "frog"
+      ],
+      [
+        "frog",
+        "snake"
+      ]
+    ],
+    "publisher": "아이스크림미디어",
+    "textbookTitle": "과학 4학년 2학기 · 생물과 환경"
+  },
+  "lessonModels": [
+    {
+      "source": "workbook printed page24",
+      "kind": "card activity",
+      "separateFromOtherModels": true
+    },
+    {
+      "source": "workbook printed page25",
+      "kind": "simple and complex comparison",
+      "separateFromOtherModels": true
+    },
+    {
+      "source": "workbook printed page34",
+      "kind": "summary activity",
+      "separateFromOtherModels": true
+    }
+  ],
+  "learningModule": "src/learning.js",
+  "recordMeaning": "Events and routes are game-model records, not observations of wild animals."
+}

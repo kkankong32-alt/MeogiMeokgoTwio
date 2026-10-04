@@ -1,0 +1,65 @@
+{
+  "tool": "OpenAI built-in image generation",
+  "status": "original-generated-art-preserved-in-authorized-release",
+  "sourceReference": "assets/predator/snake-v01.png",
+  "sourceReferenceSha256": "fab4433b45a1f0825bc99b77e3a5756efa78384300fe559cb7e02a0f6d87cfb4",
+  "transparent_background": true,
+  "output": "snake-head-dorsal-v01-raw.png",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "sourcePixelsEdited": false,
+  "alphaChecks": {
+    "visibleBoundsAtAlpha32": [
+      106,
+      280,
+      1435,
+      742
+    ],
+    "transparentPixels": 1177506,
+    "totalPixels": 1572864,
+    "visualComposite": "dorsal-head-alpha-review.png",
+    "note": "Clean native Canvas composite. Some invisible low-alpha fringe far outside visible bounds; optional runtime crop [100,270,1445,755]."
+  },
+  "registration": {
+    "forward": [
+      1,
+      0
+    ],
+    "centerlineY": 510,
+    "headPivot": [
+      1120,
+      511
+    ],
+    "joinCenter": [
+      500,
+      508
+    ],
+    "joinOpaqueEdgesY": [
+      396,
+      620
+    ],
+    "joinWidth": 225,
+    "snoutTip": [
+      1435,
+      510
+    ],
+    "safeHeadCrop": [
+      100,
+      270,
+      1445,
+      755
+    ],
+    "joinOverlapSuggestedSourcePixels": [
+      400,
+      650
+    ],
+    "scaleFormula": "headScale = intendedNeckDiameterScreenPixels / 225",
+    "orientation": "True dorsal view, two visible eyes; rotate continuously rather than mirroring for each horizontal sign."
+  },
+  "integrationGuidance": [
+    "Keep the head rigid. Align the final neck tangent to head orientation before the join; preserve C1 continuity.",
+    "Blend two textures within an overlap along the SAME centerline. Do not interpolate screen-space between an unrelated bent-body point and rigid-head point."
+  ]
+}

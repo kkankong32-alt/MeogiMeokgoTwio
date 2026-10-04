@@ -1,0 +1,10 @@
+/** Explicit release allowlist. Never copies notes, histories, credentials or textbook originals. */
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const root=path.resolve(import.meta.dirname,'..'),destination=path.resolve(root,'../../releases/eat-and-escape-v1.0.1');
+if(fs.existsSync(destination))throw Error('Frozen release already exists; use a new version rather than overwrite');
+fs.mkdirSync(destination,{recursive:true});
+const entries=['index.html','style.css','play-offline.html','package.json','README.md','START_HERE.txt','ASSETS.md','QA.md','.nojekyll','src','assets','data','tests','scripts'];
+for(const name of entries)fs.cpSync(path.join(root,name),path.join(destination,name),{recursive:true});
+fs.mkdirSync(path.join(destination,'qa'));for(const name of fs.readdirSync(path.join(root,'qa'))){if(/^campaign-.*\.(mjs|json)$/.test(name)||['final-tests.txt','final-check.txt','standalone-build.json','campaign-focused-test-output.txt'].includes(name))fs.copyFileSync(path.join(root,'qa',name),path.join(destination,'qa',name));}
+const records=[];function visit(dir){for(const ent of fs.readdirSync(dir,{withFileTypes:true})){const f=path.join(dir,ent.name);if(ent.isDirectory())visit(f);else{const b=fs.readFileSync(f);records.push({path:path.relative(destination,f),bytes:b.length,sha256:crypto.createHash('sha256').update(b).digest('hex')});}}}visit(destination);
+const manifest={version:'1.0.1',title:'먹이 먹고 튀어',createdAt:new Date().toISOString(),entry:'index.html',offline:'play-offline.html',runtimeNetworkDependencies:[],studentIdentityCollection:false,analytics:false,backend:false,publicationState:'prepared; deployment and HTTPS browser check owned by release operator',files:records};fs.writeFileSync(path.join(destination,'release-manifest.json'),JSON.stringify(manifest,null,2)+'\n');fs.copyFileSync(path.join(destination,'release-manifest.json'),path.join(root,'release-manifest.json'));console.log(JSON.stringify({release:destination,files:records.length,bytes:records.reduce((n,r)=>n+r.bytes,0),offlineSha256:records.find(r=>r.path==='play-offline.html').sha256},null,2));

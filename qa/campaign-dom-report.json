@@ -1,0 +1,25 @@
+{
+  "method": "Real main.js module graph and event listeners with mocked DOM/RAF/Canvas call surface; real native-decoded image files. Not browser layout or physical touch QA.",
+  "passed": [
+    "asset loading",
+    "optional teacher from home",
+    "no-question intro",
+    "keyboard eating",
+    "move/pause/resume",
+    "settings freezing",
+    "resize explicit pause",
+    "teacher return preserves prior pause",
+    "blur archive",
+    "all six stage choices",
+    "grasshopper held eating",
+    "timeout failure",
+    "full retry",
+    "teacher close returns to same live game",
+    "closed result reopens",
+    "continue preserves food and stays untimed through settings",
+    "three-finger DOM pointer ownership",
+    "held jump never repeats",
+    "pointer cancellation releases capture"
+  ],
+  "canvasCalls": 6753400
+}

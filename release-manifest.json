@@ -1,0 +1,459 @@
+{
+  "version": "1.0.1",
+  "title": "먹이 먹고 튀어",
+  "createdAt": "2026-10-04T13:41:58.872Z",
+  "entry": "index.html",
+  "offline": "play-offline.html",
+  "runtimeNetworkDependencies": [],
+  "studentIdentityCollection": false,
+  "analytics": false,
+  "backend": false,
+  "publicationState": "prepared; deployment and HTTPS browser check owned by release operator",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ASSETS.md",
+      "bytes": 2573,
+      "sha256": "a31a547aa0423e55c69ba439c05be3d0c1c3c4206691c8b473d094aa208cc729"
+    },
+    {
+      "path": "QA.md",
+      "bytes": 5858,
+      "sha256": "5844f6817e8c2e1ef526e03a0d6007b29e18e8bfd3b7d43800d8f690c65179ae"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6582,
+      "sha256": "5b65ff58d7373b9f1653aa57e08e455c229741da417bbe02419f12df82342663"
+    },
+    {
+      "path": "START_HERE.txt",
+      "bytes": 858,
+      "sha256": "e51f07c2eecf8179718e3a9b346c22168ebf62a86300af693df894d82659cab6"
+    },
+    {
+      "path": "assets/environment/zone01-ground-v01.png",
+      "bytes": 3330214,
+      "sha256": "03cd5682ea38fb4ed822cc9a6816907018f8134da73376a037a71fdaddee3153"
+    },
+    {
+      "path": "assets/frog/approved-source-hashes.json",
+      "bytes": 505,
+      "sha256": "51c450109fb9b4f17cf6944e3b9e177d7f0f50457aa7e1b220d7db9478aafb70"
+    },
+    {
+      "path": "assets/frog/atlas-manifest.json",
+      "bytes": 24461,
+      "sha256": "ff3bd8bd9392895b3a9557b5cc214f8cd25b0ca4ebd717a935738bb3348b154b"
+    },
+    {
+      "path": "assets/frog/frog-atlas-runtime-crop-draft.lossless.webp",
+      "bytes": 2523718,
+      "sha256": "e7db566e504d5b4942644a11fea732df36a0d8484b0a588d641a5a1a880d9224"
+    },
+    {
+      "path": "assets/frog/mouth-interior.png",
+      "bytes": 300725,
+      "sha256": "58f83adc9d34af5b76f65c0715f8d347dcc8458e904515a6a0ba401571cd441a"
+    },
+    {
+      "path": "assets/frog/registration.json",
+      "bytes": 3899,
+      "sha256": "02ffb1859f27dc50f47ba17f537bf6e77435d3e481731ef5333075bd305df4bf"
+    },
+    {
+      "path": "assets/frog/tongue-ribbon.png",
+      "bytes": 22975,
+      "sha256": "d17b85d6d85c35409413f5b0437d2730bed2070fdfe47f2822237cc476a4e5f0"
+    },
+    {
+      "path": "assets/manifest.json",
+      "bytes": 8787,
+      "sha256": "f53a6038126b2f6bb977c1c50708efa9ee74d9dd3d23bd04d1ae3ed43467dc24"
+    },
+    {
+      "path": "assets/predator/snake-head-dorsal-v01-provenance.json",
+      "bytes": 1753,
+      "sha256": "4799f5d245a84754442330906258ba809107e1570a21c49cf8a48a864296121d"
+    },
+    {
+      "path": "assets/predator/snake-head-dorsal-v01.png",
+      "bytes": 1629577,
+      "sha256": "b5f6b248b3b364963dac3f1b90b600747600d5baf4b380128be4e428870ed1a7"
+    },
+    {
+      "path": "assets/predator/snake-v01.png",
+      "bytes": 544803,
+      "sha256": "fab4433b45a1f0825bc99b77e3a5756efa78384300fe559cb7e02a0f6d87cfb4"
+    },
+    {
+      "path": "assets/prey/grasshopper-v01.png",
+      "bytes": 1246745,
+      "sha256": "eb1ade1e3c16364ba21c29bfc699136f94b65558fc1bd318c8c33ec6bdd2aa71"
+    },
+    {
+      "path": "assets/title/entry-v03.png",
+      "bytes": 2656526,
+      "sha256": "a8c9e3df3c03b1e1ba217a9c648d439a3850342db114f950a764ab34c08b5ce4"
+    },
+    {
+      "path": "data/ecology.json",
+      "bytes": 1116,
+      "sha256": "fb7c2e2535aff652f3c1de42c88f51785e5e7aa6046f87bf01b54fd0288e92b1"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4872,
+      "sha256": "0e866a529f1ff49137fa131c24a0470294f50b3be33bd935dd976d560934b2b4"
+    },
+    {
+      "path": "package.json",
+      "bytes": 627,
+      "sha256": "2add34a23abf957209e33638e2d336223ac2aefd7e30813cfa61701b982b258b"
+    },
+    {
+      "path": "play-offline.html",
+      "bytes": 16601318,
+      "sha256": "9f3288238749a414fa08cd6003233c99d334997b5fbaf4b5e6b429664e987c18"
+    },
+    {
+      "path": "qa/campaign-dom-harness.mjs",
+      "bytes": 7659,
+      "sha256": "35f3eb45bf07bb9451cc2694594dea9b25ed3267cde04349613e84a2a809f2e6"
+    },
+    {
+      "path": "qa/campaign-dom-report.json",
+      "bytes": 829,
+      "sha256": "87b196e103b0b30e4c374959e2647e31adaa7bc413c59e68cf5c52d73314eb85"
+    },
+    {
+      "path": "qa/campaign-final-report.mjs",
+      "bytes": 10706,
+      "sha256": "0876449bc9db1e11d38aa36f98a562a720f4e0eee41e06c5a3debd61b15a2e98"
+    },
+    {
+      "path": "qa/campaign-final-validation.json",
+      "bytes": 4312,
+      "sha256": "cb3cc70b8210ca08fb99c1305ed70e38f390aa02ace0a94bf142874b136af777"
+    },
+    {
+      "path": "qa/campaign-native-render-report.json",
+      "bytes": 8374,
+      "sha256": "de441fea2adbe486889d2a84e33f55cea35ced6591ae31147ee5ee78269e9767"
+    },
+    {
+      "path": "qa/campaign-public-citations-check.mjs",
+      "bytes": 1719,
+      "sha256": "fead36ca50882de85bbb8d5ad9fb9c18e36702b1c0d37d24ac472a91db487378"
+    },
+    {
+      "path": "qa/campaign-public-citations-report.json",
+      "bytes": 339,
+      "sha256": "c4456f9b86e68b356169fcaf57ae7c643bf6865ab8950d4266fc536603a38aef"
+    },
+    {
+      "path": "qa/campaign-render.mjs",
+      "bytes": 3300,
+      "sha256": "2ef4ee304b10381b41bc494a84a8840996a9355c41ee6effa7811b6f6b10fcb8"
+    },
+    {
+      "path": "qa/campaign-replay-report.json",
+      "bytes": 239735,
+      "sha256": "eec4d8503feed59a061b97870c1e0d65bff0b00eaa08f30ffe2b31e28f32987d"
+    },
+    {
+      "path": "qa/campaign-replay.mjs",
+      "bytes": 7322,
+      "sha256": "ef8bc2df71bb9f5c5dc54d4232a03118d5729fc4770dd1973a8619f769432130"
+    },
+    {
+      "path": "qa/campaign-reset-report.json",
+      "bytes": 199,
+      "sha256": "cd364c3fbda1899db36c24bc628b439868f69a20e3101e14c91288185c2be6e2"
+    },
+    {
+      "path": "qa/campaign-responsive-replay-report.json",
+      "bytes": 242580,
+      "sha256": "8362598b54f4a547520a9bed987a1ba0465eb2a6da68164e317f3892cbcd4092"
+    },
+    {
+      "path": "qa/campaign-responsive-replay.mjs",
+      "bytes": 833,
+      "sha256": "6bcee44d690641fd5522f840e43b34b0a678921367fb2b1b4ea3267c2ee0ee68"
+    },
+    {
+      "path": "qa/campaign-standalone-check.mjs",
+      "bytes": 1718,
+      "sha256": "c464a8eeee0480a4911a900ae764e5d2385bf790fb6526903c9c8b1f2edf824c"
+    },
+    {
+      "path": "qa/campaign-standalone-report.json",
+      "bytes": 539,
+      "sha256": "ec329c1ed95c19a45ca1bfc011cdf9725bf1ae113b415bb452641f37a1d3ff72"
+    },
+    {
+      "path": "qa/campaign-version-equivalence-check.mjs",
+      "bytes": 2017,
+      "sha256": "3b96b77331afd44fa1d12addc9b5db81d057ebe17c3100c99c3532eb77af3947"
+    },
+    {
+      "path": "qa/campaign-version-equivalence-report.json",
+      "bytes": 3025,
+      "sha256": "1a0cbbcd32958ce1353af35762e6ecf6b6286d1af251e24097087634eb6d13a5"
+    },
+    {
+      "path": "qa/final-check.txt",
+      "bytes": 402,
+      "sha256": "01b9ccb39b7491ea859615f2b89beaf63ed6c180075f34c3fbd732c0587ecb5d"
+    },
+    {
+      "path": "qa/final-tests.txt",
+      "bytes": 21038,
+      "sha256": "e9aec2b79097ad8c70966f0046422ea7e2050cfe1e97af9de66a08137a8c9486"
+    },
+    {
+      "path": "qa/standalone-build.json",
+      "bytes": 3731,
+      "sha256": "feeb74f07c59f0a59697996f08dbf000ee2771c3403d8e76c1cad97961aed94b"
+    },
+    {
+      "path": "scripts/build-standalone.js",
+      "bytes": 3457,
+      "sha256": "af94b88b87fc34550498a8c4ca15e37bb277057df6223fedcb186597b3ff9c20"
+    },
+    {
+      "path": "scripts/check-assets.js",
+      "bytes": 1880,
+      "sha256": "81e839b0e67afc88224a57e62ea9eaa1367d033abad3444200a92f148f065c56"
+    },
+    {
+      "path": "scripts/check-source.js",
+      "bytes": 859,
+      "sha256": "1a3a0ab99cc0651173b2e28497a146671e30f222b734a8bd4450e7efadd6cf99"
+    },
+    {
+      "path": "scripts/package-release.js",
+      "bytes": 2155,
+      "sha256": "5c11e99a21c285257e1e7b15270dd72364fcd99572ba2e44895c20542c3fbd4e"
+    },
+    {
+      "path": "src/assets.js",
+      "bytes": 1216,
+      "sha256": "0c75ea50270c1e328effe5ac85208259cf466260df4caa391df1e4b25218005c"
+    },
+    {
+      "path": "src/audio.js",
+      "bytes": 2263,
+      "sha256": "e9642af8f4694af46b398d4208fe785e09289349815683c06fb63129c16cb4b9"
+    },
+    {
+      "path": "src/campaign.js",
+      "bytes": 4264,
+      "sha256": "1fb8112fece088fa30f0398ebc1272dc878a225669e4f6b921e55fcd8e9fbdef"
+    },
+    {
+      "path": "src/core.js",
+      "bytes": 35607,
+      "sha256": "2462517a63be871739fb4331a7ed81f65d81a1f2da75d6b3c701a40caad2e449"
+    },
+    {
+      "path": "src/creatures.js",
+      "bytes": 5841,
+      "sha256": "eb0518e7e01cd9a8f60e217545c49b12591dcd002c0c469f2de46ed0ccdeeaa3"
+    },
+    {
+      "path": "src/fauna/grasshopper-rig.mjs",
+      "bytes": 9377,
+      "sha256": "a70924eabb084d511511bbeb74985c47ebb50a8f11cb13a20bee6dfe8ab012c6"
+    },
+    {
+      "path": "src/fauna/prey-behavior.mjs",
+      "bytes": 3529,
+      "sha256": "4f7dfdd69c4e46146e5c739a59f75249c878cf54a674a79eb4e33c9a85cabc7c"
+    },
+    {
+      "path": "src/fauna/snake-rig.mjs",
+      "bytes": 11991,
+      "sha256": "00561f223b26d9d559c8396ca9275895bdffecdb9c1dfd960ade37e6b5ce0298"
+    },
+    {
+      "path": "src/frog-registration.js",
+      "bytes": 20247,
+      "sha256": "8513a92f74e0568c84e42f886605eff4814980a43e1f0a9420813ab621c2b7d2"
+    },
+    {
+      "path": "src/input.js",
+      "bytes": 3848,
+      "sha256": "3baf07e955ea4e4227bb0bd222cecc118c6af1bb61e6f30de3d45f06316978fe"
+    },
+    {
+      "path": "src/learning.js",
+      "bytes": 46173,
+      "sha256": "9179084ec54ada45b428929d1b7e76f22cfb88e88d9251d223c47fd442c2dd02"
+    },
+    {
+      "path": "src/lifecycle.js",
+      "bytes": 967,
+      "sha256": "61c005b6bd2d5d706b4b3bc988201afea3c0ecc9616173ed603b82d53ac4d9b2"
+    },
+    {
+      "path": "src/locomotion.js",
+      "bytes": 1042,
+      "sha256": "9a9c90fb21e0af475a84afd6d18b55d6c95e89d0ce12657f112fd5bfdb283c43"
+    },
+    {
+      "path": "src/main.js",
+      "bytes": 29655,
+      "sha256": "d3918f7be305242addc9cbcda249ed6fd00b17781d9cc21af0dac5ffbdd990d6"
+    },
+    {
+      "path": "src/motion.js",
+      "bytes": 1805,
+      "sha256": "322be9a6bacf72de84ba783a921b826d8a06426b1f96e9450420a1b51d7f87ef"
+    },
+    {
+      "path": "src/navigation.js",
+      "bytes": 2687,
+      "sha256": "f6ac10a6b7e37151f6bd53b12b6418069259c1ec55ab1a1fedf8584040a4de88"
+    },
+    {
+      "path": "src/recap.js",
+      "bytes": 1668,
+      "sha256": "c72fd3a6ffd7221f7ec8765d3ebfa73332c06b68ea6d5b28e21ec5de41ce31d9"
+    },
+    {
+      "path": "src/render.js",
+      "bytes": 18737,
+      "sha256": "81d803e14612317131dedeb64e73e8410ec6614e6eecd74c6daa6497ea0195fd"
+    },
+    {
+      "path": "src/sprites.js",
+      "bytes": 1561,
+      "sha256": "5a67d3f4a852dbc5dd288a65384f545ffe245a6ef8fd5ac74063bdf01ff01b42"
+    },
+    {
+      "path": "src/storage.js",
+      "bytes": 1353,
+      "sha256": "dee0bfc553a1eb7ea179d449d02a2f2d9d5685cd1392adca188b0c9b5e9b0693"
+    },
+    {
+      "path": "src/tongue-gameplay.js",
+      "bytes": 1995,
+      "sha256": "4815f8abfbadf346a822b74d6b3a365815464ac4c842d7202c9df1bfdb420d19"
+    },
+    {
+      "path": "src/vendor/big-leap-proof/v02/big-leap-v02.mjs",
+      "bytes": 2316,
+      "sha256": "f28725a7994743dcf1bd0b5c0bd26eeafa54ecb803423eab8274cb6a04d729e2"
+    },
+    {
+      "path": "src/vendor/big-leap-proof/v03/big-leap-v03.mjs",
+      "bytes": 1013,
+      "sha256": "ecb7c3a427be7565b697de2247decc69df4f3bebc75d93373767be8f508c4b32"
+    },
+    {
+      "path": "src/vendor/full-motion/full-rig.mjs",
+      "bytes": 24380,
+      "sha256": "af23eccefe6178dfb6d80505b5649987034e78cf7956bafbc490f235e4e586ca"
+    },
+    {
+      "path": "src/vendor/rig-math.mjs",
+      "bytes": 2846,
+      "sha256": "9684ae8ae49ba362b4e21c3fbd12ab586073e40df97e6278abab7fbefab4ec51"
+    },
+    {
+      "path": "src/vendor/tongue-v10.mjs",
+      "bytes": 2449,
+      "sha256": "91372ef3dfdc99da09ce5033eba31ad5e09bd909429cd70160ba2562cd7d12ba"
+    },
+    {
+      "path": "src/viewport.js",
+      "bytes": 2250,
+      "sha256": "f6eafb77b370e99dbc4feb2d72795790e326b0d4e9a377d270fdeaa07b688d86"
+    },
+    {
+      "path": "style.css",
+      "bytes": 13363,
+      "sha256": "f3649d7776337c34731eac7c905b483dd60d6771004a681de25802415baf5ecd"
+    },
+    {
+      "path": "tests/campaign-paths.test.js",
+      "bytes": 2255,
+      "sha256": "06e551d827f9885c18ea9159d43ddbfdd6976fc7aaf150d490a182d453761b55"
+    },
+    {
+      "path": "tests/campaign-presentation.test.js",
+      "bytes": 8879,
+      "sha256": "20be710e4d44be3d786c8c9ab6c54a6828e5d89becb80035bb23a7ef7361d262"
+    },
+    {
+      "path": "tests/campaign-progression.test.js",
+      "bytes": 6833,
+      "sha256": "67a9c264e31daec11a4f5bfdee4f782a281a171d924c4fdd83b8499c772c4545"
+    },
+    {
+      "path": "tests/campaign-rules.test.js",
+      "bytes": 10121,
+      "sha256": "20f73a77f7c93315773ada708fd9873846141253329cfc554806b4b9928ad81f"
+    },
+    {
+      "path": "tests/campaign-ui.test.js",
+      "bytes": 7585,
+      "sha256": "4ae1e7f576e0c791cdc1ab70845831e0bb03c46b30f2b9d3f6d307a04bcd272b"
+    },
+    {
+      "path": "tests/core.test.js",
+      "bytes": 9057,
+      "sha256": "fab59cc641eb7a85966eb1c520970497b44f5776a628c0bf35748eafe197a717"
+    },
+    {
+      "path": "tests/fauna-motion.test.js",
+      "bytes": 5098,
+      "sha256": "c768062a739dd9e0d2d7dd7fec4fae71f697d2b6d63236546d7a0b503661f9dd"
+    },
+    {
+      "path": "tests/learning.test.js",
+      "bytes": 17965,
+      "sha256": "0fd489b2f437839f2f819005ec68bc386b7c8c5c21d4863e6713dd8aad64e5d1"
+    },
+    {
+      "path": "tests/locomotion.test.js",
+      "bytes": 3128,
+      "sha256": "c8c88cc8949d734e67fc826fb08d2894a04f6780e6ce2092713b6a768b38aec2"
+    },
+    {
+      "path": "tests/long-snake.test.js",
+      "bytes": 2947,
+      "sha256": "1bd6b085c572f83a5378f12049e29ffb15fd6facbea72981590efcd3b99d5e7c"
+    },
+    {
+      "path": "tests/motion-integration.test.js",
+      "bytes": 12088,
+      "sha256": "84060a75c01df797a945edfd68da643353e152833a10dfef07b82a0a16803000"
+    },
+    {
+      "path": "tests/public-artifacts.test.js",
+      "bytes": 1242,
+      "sha256": "b5c8b4d640a3f34fc53c2cae0299482b01798b440c7d709d98c34d3ba6596612"
+    },
+    {
+      "path": "tests/responsive.test.js",
+      "bytes": 9534,
+      "sha256": "02d7358ecbaa0aac7dbac1b1041c3aa84fa9c86db4ee9a9d392f47546ed139dd"
+    },
+    {
+      "path": "tests/scale-turning.test.js",
+      "bytes": 2895,
+      "sha256": "d89b65aabb94e02f9a7bf162b88025c61ac26086cc31be0f9222d85e3be82180"
+    },
+    {
+      "path": "tests/storage-audio.test.js",
+      "bytes": 2626,
+      "sha256": "1ae4167e6f3d14e34e9a7437abe3b88acd8b2d24dfc0a0c73cea1a0dd3eb641c"
+    }
+  ]
+}
