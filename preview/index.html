@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#142c23">
+  <meta name="description" content="개구리와 메뚜기가 되어 먹이를 먹고 목적지까지! 이동·먹기·도약으로 직접 피하고, 먹이 길을 실험하는 짧은 체험판.">
+  <title>먹이 먹고 튀어</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="inquiry.css">
+</head>
+<body>
+  <div id="app">
+    <section id="entry" aria-label="먹이 먹고 튀어 시작 화면">
+      <div class="entry-art" id="entry-art">
+        <img id="title-image" src="assets/title/entry-v03.png" width="1664" height="936" alt="먹이 먹고 튀어. 먹이를 쫓던 내가, 이번엔 먹이?!" fetchpriority="high">
+        <h1 class="entry-fallback">먹이 먹고 튀어</h1>
+        <button id="start" class="start-button" disabled><span class="sr-only">게임 시작하기</span></button>
+      </div>
+      <p class="entry-note">먹이를 먹고, 위험을 넘고, 목적지까지!<br><span>짧은 체험판 · 메뚜기 → 관찰소 → 개구리</span></p>
+      <p id="asset-status" role="status">연못 그림을 준비하고 있어요…</p>
+      <button id="retry-assets" hidden>그림 다시 불러오기</button>
+      <nav class="entry-links" aria-label="시작 메뉴">
+        <button id="entry-stages">체험 안내</button>
+        <button id="entry-teacher">발견 노트</button>
+        <button id="entry-settings">조작·설정</button>
+        <button id="checkpoint-resume" hidden>개구리 구간 이어가기</button>
+      </nav>
+      <p id="completion-summary" class="small-note">움직이고 먹고 도약하기, 조작은 세 가지만</p>
+    </section>
+    <div id="game" hidden>
+      <header><div><span class="tag" id="stage-label">연못 탐험</span><h1>먹이 먹고 튀어</h1></div><button id="help">조작·설정</button></header>
+      <main>
+        <section class="stage" aria-label="게임 영역">
+          <div class="stage-top" data-game-occlusion>
+            <div class="hud" id="hud" role="group" aria-label="플레이 상태">
+              <span id="food">먹이 0 / 4</span><span id="timer">90초</span><span id="escape">위기 탈출 1회</span>
+            </div>
+            <div class="top-actions"><button id="pause">일시정지</button><button id="stages">안내</button><button id="teacher">발견</button><button id="compact-help">설정</button></div>
+          </div>
+          <div class="mission-bar"><strong id="mission">먹이를 먹고 목적지까지!</strong><span id="state">첫 한입</span></div>
+          <div class="playfield" id="playfield">
+            <canvas id="world" tabindex="0" aria-label="생태 액션 게임. 방향키 또는 WASD 이동, J 또는 Z 먹기, K 또는 X 또는 스페이스 큰 도약, Escape 일시정지" aria-describedby="keyboard-instructions"></canvas>
+            <div id="pause-overlay" hidden><p id="pause-reason">일시정지</p><p class="small-note">주변을 확인한 뒤 이어가세요</p><button id="resume">계속하기</button><button id="pause-home">시작 화면</button></div>
+          </div>
+          <div class="controls" id="touch-controls" aria-label="화면 조작" data-game-occlusion>
+            <div class="pad-wrap"><div id="pad" role="group" aria-label="이동 조이스틱. 누른 채 원하는 방향으로 움직이세요"><span id="stick"></span><i>이동</i></div></div>
+            <p class="control-hint">왼손 이동<br>오른손 먹기·도약</p>
+            <div class="actions"><button id="eat">먹기 <small id="eat-label">J / Z</small></button><button id="jump">도약 <small id="jump-label">준비</small></button></div>
+          </div>
+          <div class="stage-footer"><span id="status">먹이 목표를 채운 뒤 도착 지점으로!</span><span id="condition-label">기본 도전</span></div>
+        </section>
+        <aside><strong id="aside-title">먹던 나도 누군가의 먹이!</strong><p id="keyboard-instructions">방향키 / WASD 이동<br>J / Z 먹기 (유지 가능)<br>K / X / SPACE 큰 도약<br>ESC 일시정지</p><p>천적이 공격을 준비하면 머리 방향을 살펴봐요. 옆으로 피하거나 도약하세요. 풀숲에서는 몸을 숨길 수 있어요</p><p class="note">하트와 쉼터는 게임 규칙이에요. 먹이 관계는 직접 관찰해 찾아봐요</p><button id="records">먹이 관계 보기</button></aside>
+      </main>
+    </div>
+  </div>
+  <dialog id="dialog" aria-labelledby="dialog-title">
+    <div class="dialog-heading"><h2 id="dialog-title"></h2><button id="dialog-close" aria-label="창 닫기">닫기</button></div>
+    <div id="dialog-content"></div>
+  </dialog>
+  <p class="sr-only" id="announcement" role="status" aria-live="polite"></p>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
