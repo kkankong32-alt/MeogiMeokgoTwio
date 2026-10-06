@@ -5,7 +5,7 @@ const EAT_KEYS=new Set(['KeyJ','KeyZ']);
 const JUMP_KEYS=new Set(['KeyK','KeyX','Space']);
 export const PAD_DEADZONE=6;
 /** Each finger owns exactly one control. Held eating and edge-triggered jumping are separate. */
-export function createInput() {
+export function createInput({tapEating=false}={}) {
   const keys=new Set(),actions=new Map(),pending={eat:new Set(),jump:new Set()};
   let enabled=false,padId=null,padMove={x:0,y:0},stick={x:0,y:0},mouse=null,cancelEat=false;
   const eatingHeld=()=>[...keys].some(k=>EAT_KEYS.has(k))||[...actions.values()].includes('eat');
@@ -39,8 +39,8 @@ export function createInput() {
     keyUp(code){
       const wasHeld=keys.delete(code);
       if(EAT_KEYS.has(code)){
-        pending.eat.delete(code);
-        if(wasHeld&&!eatingHeld()){pending.eat.clear();cancelEat=true;}
+        if(!tapEating)pending.eat.delete(code);
+        if(wasHeld&&!eatingHeld()){if(!tapEating)pending.eat.clear();cancelEat=true;}
       }
     },
     startPad(id,x,y,radius){if(!enabled||padId!==null||actions.has(id))return false;padId=id;return updatePad(id,x,y,radius);},
@@ -48,8 +48,8 @@ export function createInput() {
     endPointer(id,cancel=false){
       const action=actions.get(id);actions.delete(id);
       if(action==='eat'){
-        pending.eat.delete(id);
-        if(!eatingHeld()){pending.eat.clear();cancelEat=true;}
+        if(cancel||!tapEating)pending.eat.delete(id);
+        if(!eatingHeld()){if(!tapEating)pending.eat.clear();cancelEat=true;}
       }else if(cancel&&action)pending[action].delete(id);
       if(padId===id){padId=null;padMove={x:0,y:0};stick={x:0,y:0};}
     },

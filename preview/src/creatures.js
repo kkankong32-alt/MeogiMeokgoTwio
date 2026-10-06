@@ -28,10 +28,12 @@ export function createCreatureRenderer(assets){
  function caterpillar(c,x,y,q={}, {scale=1,flip=1,lift=q.z??0}={}){
   c.save();c.translate(x,y-lift);c.scale(scale*(q.facing??1)*flip,scale);
   const phase=q.phase??0;
-  // Small leg pairs and jointed body distinguish the slower second food route.
-  for(let i=0;i<5;i++){const px=-17+i*7;c.strokeStyle='#554826';c.lineWidth=2;c.beginPath();c.moveTo(px,3);c.lineTo(px-2,9);c.stroke();}
-  for(let i=0;i<6;i++){const px=-20+i*7,py=-3+Math.sin(phase*3+i*.65)*1.2;c.beginPath();c.ellipse(px,py,i===5?7:6.6,i===5?8:7,0,0,Math.PI*2);c.fillStyle=i===5?'#e0bc60':i%2?'#aaba50':'#bdd070';c.fill();c.strokeStyle='#536a36';c.lineWidth=1.2;c.stroke();c.beginPath();c.ellipse(px-1,py-2,2.4,1.4,0,0,Math.PI*2);c.fillStyle='#e8e8b680';c.fill();}
-  c.beginPath();c.arc(18,-6,1.5,0,Math.PI*2);c.fillStyle='#263e2d';c.fill();c.restore();
+  if(assets.caterpillar){
+   const width=64,height=528/1856*width,bob=q.state==='foraging'?Math.sin(phase*5)*.6:0;
+   // Preserve the generated cutout's aspect ratio and centered foot anchor.
+   c.drawImage(assets.caterpillar,-width/2,-height*.9867+bob,width,height);
+  }else{c.fillStyle='#aab865';c.beginPath();c.ellipse(0,-7,25,8,0,0,Math.PI*2);c.fill();}
+  c.restore();
  }
  function frog(c,p,ground){
   c.save();c.translate(ground.x,ground.y);c.scale(ART.scale*facing(p),ART.scale);c.translate(-ART.pivot.x,-ART.pivot.y);

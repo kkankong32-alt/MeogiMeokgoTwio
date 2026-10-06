@@ -34,3 +34,10 @@ export function groundToScreen(x,y,z,camera,metrics) {
   return {x:view.x+view.width/2+(x-camera.x)*scale,y:view.y+view.height/2+((y-camera.y)*GROUND_Y-z)*scale};
 }
 export function isInsideView(x,y,{view}) { return x>=view.x&&x<=view.x+view.width&&y>=view.y&&y<=view.y+view.height; }
+
+/** Campaign keeps enough projected ground height for a whole animal and its strike on short landscape screens. */
+export function storyViewportMetrics(width,height,pixelRatio=1) {
+ const m=viewportMetrics(width,height,pixelRatio);
+ const scale=Math.max(m.view.width/1672,Math.min(m.scale,m.view.height/360));
+ return{...m,scale,logicalWidth:m.view.width/scale,logicalHeight:m.view.height/scale};
+}
