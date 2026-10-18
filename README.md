@@ -10,3 +10,6 @@
 현행 소스와 검사: explore/ (cd explore 후 npm test). 기존 6단계판은 backup-before-four-species-20261018 브랜치로 복구할 수 있습니다. 이전 루트 소스는 보존되지만 메인 실행은 explore/index.html입니다.
 
 점검 상세: explore/REPORT-FINAL.txt. 자동검사 293개 통과. 실제 휴대폰·태블릿의 성능과 학생 대상 난이도 평가는 별도입니다. 이 게임은 자연의 일부 먹이 관계를 단순화한 모형이며 단원 전체를 대체하지 않습니다. 교재 원문과 학생 기록은 포함하지 않습니다.
+
+입장 퀴즈 v1.0.1: https://kkankong32-alt.github.io/MeogiMeokgoTwio/quiz/
+10문항, 6유형, 7문항 이상 정답이면 기존 게임으로 연결합니다. 서술형은 지정 표현·부정 표현 규칙으로 자동채점합니다.
