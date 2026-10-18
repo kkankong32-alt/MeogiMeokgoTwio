@@ -1,0 +1,45 @@
+import {NAMES,EDGES,edgeKey,edgeLabel,evidenceFor,downloadFile} from './portfolio.js';
+// PDF 1.4: each page embeds a locally rendered JPEG. Korean glyphs are rendered by the browser.
+export function pdfBytes(images,width=1240,height=1754){const enc=new TextEncoder(),chunks=[],offsets=[0];let size=0;const put=s=>{const b=typeof s==='string'?enc.encode(s):s;chunks.push(b);size+=b.length;};const obj=(id,body)=>{offsets[id]=size;put(id+' 0 obj\n');put(body);put('\nendobj\n');};put('%PDF-1.4\n');obj(1,'<< /Type /Catalog /Pages 2 0 R >>');obj(2,'<< /Type /Pages /Count '+images.length+' /Kids ['+images.map((_,i)=>(3+i*3)+' 0 R').join(' ')+'] >>');images.forEach((bytes,i)=>{const id=3+i*3;obj(id,'<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im '+(id+1)+' 0 R >> >> /Contents '+(id+2)+' 0 R >>');offsets[id+1]=size;put((id+1)+' 0 obj\n<< /Type /XObject /Subtype /Image /Width '+width+' /Height '+height+' /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length '+bytes.length+' >>\nstream\n');put(bytes);put('\nendstream\nendobj\n');const cmd='q 595.28 0 0 841.89 0 0 cm /Im Do Q';obj(id+2,'<< /Length '+enc.encode(cmd).length+' >>\nstream\n'+cmd+'\nendstream');});const xref=size;put('xref\n0 '+offsets.length+'\n0000000000 65535 f \n');for(const n of offsets.slice(1))put(String(n).padStart(10,'0')+' 00000 n \n');put('trailer\n<< /Size '+offsets.length+' /Root 1 0 R >>\nstartxref\n'+xref+'\n%%EOF');const out=new Uint8Array(size);let at=0;for(const b of chunks){out.set(b,at);at+=b.length;}return out;}
+export function drawPortrait(ctx,id,x,y,size){const img=document.getElementById(id==='grass'?'grass-reference':'title-image');if(!img?.complete||!img.naturalWidth)return;ctx.save();ctx.beginPath();ctx.roundRect(x,y,size,size,22);ctx.clip();if(id==='grass')ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,x,y,size,size);else{const index=['grasshopper','frog','snake','hawk'].indexOf(id);ctx.drawImage(img,img.naturalWidth*(.035+index*.238),img.naturalHeight*.28,img.naturalWidth*.215,img.naturalHeight*.35,x,y,size,size);}ctx.restore();}
+export async function makeBook(data,comparison,{brief=false}={}){
+ await document.fonts?.ready;const pages=[],ink='#183c32',muted='#53685e',green='#185c47',pale='#eef4ee',gold='#b3873f';
+ for(let page=0;page<(brief?1:2);page++){
+ const c=document.createElement('canvas');c.width=1240;c.height=1754;c.className='book-page';c.setAttribute('role','img');c.setAttribute('aria-label',(page+1)+'쪽 '+(page?'비교와 나의 설명':'탐험 기록과 먹이그물'));const g=c.getContext('2d');
+ const box=(x,y,w,h,color=pale)=>{g.fillStyle=color;g.beginPath();g.roundRect(x,y,w,h,16);g.fill();};
+ const text=(s,x,y,size=26,color=ink,bold=false)=>{g.fillStyle=color;g.font=(bold?'bold ':'')+size+'px sans-serif';g.textAlign='left';g.fillText(String(s),x,y);};
+ const rule=(y)=>{g.strokeStyle='#cad7ce';g.lineWidth=2;g.beginPath();g.moveTo(70,y);g.lineTo(1170,y);g.stroke();};
+ const wrap=(value,x,y,w,font=25,lineHeight=32)=>{g.font=font+'px sans-serif';g.fillStyle=ink;let row='';for(const ch of String(value).replace(/\s+/g,' ')){if(g.measureText(row+ch).width>w){g.fillText(row,x,y);y+=lineHeight;row=ch;}else row+=ch;}if(row)g.fillText(row,x,y);return y;};
+ const section=(num,title,y,sub='')=>{box(70,y-30,46,40,green);text(num,79,y,25,'#fff',true);text(title,132,y,30,ink,true);if(sub)text(sub,132,y+35,22,muted);};
+ const answer=(label,value,y,h,font=24)=>{box(70,y,1100,h,'#f4f6f1');text(label,94,y+34,25,green,true);if(value)wrap(value,94,y+72,1052,font,font+5);else{text('아직 작성하지 않았어요. 다음 탐험에서 채워 보세요.',94,y+76,24,muted);g.strokeStyle='#d7e0d7';g.lineWidth=1;for(let z=y+110;z<y+h-12;z+=32){g.beginPath();g.moveTo(94,z);g.lineTo(1146,z);g.stroke();}}};
+ g.fillStyle='#fffefa';g.fillRect(0,0,1240,1754);g.fillStyle=green;g.fillRect(0,0,1240,14);
+ text('먹이 먹고 튀어  /  생태 탐구 보고서',70,67,23,green,true);text(page?'비교하고, 근거로 설명하기':'내가 발견한 연못의 연결',70,130,48,ink,true);
+ text((data.name||'이름 미입력')+'  ·  '+new Date().toLocaleDateString('ko-KR'),70,176,24,muted);text(page?'02 / 생각 정리':'01 / 관찰 기록',949,67,23,green,true);rule(196);
+ if(page===0){
+ const roles=['grasshopper','frog','snake','hawk'];roles.forEach((id,i)=>{const x=70+i*280;box(x,218,260,100);drawPortrait(g,id,x+12,230,76);text(NAMES[id],x+102,258,26,ink,true);text(data.rounds.filter(r=>r.role===id).length+'판 탐험',x+102,295,23,muted);});
+ section('1','실제로 겪은 사건',365,brief?'생물별 최근 체험 · 먹이 개수는 과학 이해 점수가 아니에요.':'최근 4판의 핵심 기록 · 먹이 개수는 과학 이해 점수가 아니에요.');
+ box(70,422,1100,44,green);text('역할 / 시간',90,452,23,'#fff',true);text('먹이',330,452,23,'#fff',true);text('직접 먹거나 잡힌 관계',450,452,23,'#fff',true);
+ const recent=brief?roles.map(id=>[...data.rounds].reverse().find(r=>r.role===id)).filter(Boolean):data.rounds.slice(-4);for(let i=0;i<4;i++){const y=466+i*62;if(i%2===0)box(70,y,1100,62,'#eef4ee');const r=recent[i];if(r){text(NAMES[r.role]+' · '+r.time+'초',90,y+39,24);text(r.food+'개',330,y+39,24);const keys=[...new Set(r.events.map(e=>edgeKey(e.food,e.eater)))];text(keys.length?keys.map(edgeLabel).join(' / '):'직접 사건 없음',450,y+39,23);}else text(i===0?'아직 끝낸 탐험이 없어요.':'—',90,y+39,24,muted);}
+ section('2','내가 연결한 먹이그물',775,'먹히는 생물에서 먹는 생물로 화살표를 이어요.');
+ box(70,830,1100,550,'#f1f5ef');const pos={grass:[185,1000],grasshopper:[470,1000],frog:[755,1000],snake:[1040,1000],hawk:[900,1230]};
+ for(const key of data.links){const [a,b]=key.split(':'),v=pos[a],w=pos[b],ang=Math.atan2(w[1]-v[1],w[0]-v[0]);const actual=evidenceFor(data,key).length>0;g.strokeStyle=actual?green:gold;g.fillStyle=g.strokeStyle;g.lineWidth=5;g.setLineDash(actual?[]:[12,8]);const sx=v[0]+Math.cos(ang)*85,sy=v[1]+Math.sin(ang)*85,ex=w[0]-Math.cos(ang)*85,ey=w[1]-Math.sin(ang)*85;g.beginPath();g.moveTo(sx,sy);g.lineTo(ex,ey);g.stroke();g.setLineDash([]);g.beginPath();g.moveTo(ex,ey);g.lineTo(ex-20*Math.cos(ang-.45),ey-20*Math.sin(ang-.45));g.lineTo(ex-20*Math.cos(ang+.45),ey-20*Math.sin(ang+.45));g.fill();}
+ for(const [id,[x,y]]of Object.entries(pos)){drawPortrait(g,id,x-64,y-64,128);box(x-70,y+72,140,36,'#f1f5ef');g.textAlign='center';g.font='bold 25px sans-serif';g.fillStyle=ink;g.fillText(NAMES[id],x,y+100);g.textAlign='left';}
+ text('실선  내 실제 사건 기록',100,1214,23,green,true);text('점선  연결한 모형의 관계',100,1254,23,'#87622e',true);text('연결한 관계 '+data.links.length+' / 5',100,1325,23,muted);
+ box(70,1405,1100,brief?230:183,'#f6eddc');text(brief?'내가 발견한 것':'발견 포인트',94,1444,25,'#755324',true);wrap(brief?(data.answers.claim||'한 줄 정리는 선택이에요. 그림과 기록을 보며 이야기해도 좋아요.'):'개구리를 먹는 생물은 뱀과 매예요. 하나의 생물에서 여러 갈래로 이어지는 관계를 찾아보세요.',94,1485,1045,brief?22:27,brief?27:35);if(!brief)text('이 지도에는 내가 연결한 관계만 표시했어요.',94,1556,23,muted);
+ }else{
+ answer('내 예상 · 풀밭 일부가 베어지면?',comparison?.prediction||data.answers.prediction,218,212,22);
+ const rows=comparison?.rounds??[];const col=[90,480,720,940];box(70,442,1100,44,green);['조건','탐험 시간','먹이','이동 거리*'].forEach((t,i)=>text(t,col[i],472,23,'#fff',true));
+ for(let i=0;i<2;i++){const y=486+i*61;box(70,y,1100,61,i?'#fffefa':'#eef4ee');const r=rows[i];[i?'② 풀밭 일부가 베어짐':'① 기본 풀밭',r?r.time+'초':'미실시',r?r.food+'개':'—',r?Math.round(r.distance)+'':'—'].forEach((t,j)=>text(t,col[j],y+39,24));}
+ wrap('* 이동 거리는 게임 단위예요. 조작과 종료 시간이 달라질 수 있어요. 두 판만으로 자연의 변화를 단정하지 않아요.',80,638,1080,22,28);
+ section('3','내 생각을 근거로 설명해요',727);
+ answer('내 생각',data.answers.claim,752,222);
+ answer('관찰한 근거 · 어느 역할에서 어떤 사건을 보았나요?',data.answers.evidence,984,222);
+ answer('근거와 생각 연결하기',data.answers.reason,1216,222);
+ answer('다음에 확인할 질문',data.answers.next,1448,178,20);
+ }
+ rule(1650);text('자연의 먹이 관계를 간추린 모형 · 실제 기록과 예상은 구분해요.',70,1685,20,muted);text((page+1)+(brief?' / 1':' / 2'),1100,1685,22,green,true);pages.push(c);
+ }return pages;
+}
+export function saveBook(pages){const images=pages.map(c=>Uint8Array.from(atob(c.toDataURL('image/jpeg',.94).split(',')[1]),ch=>ch.charCodeAt(0)));downloadFile(pdfBytes(images),'연못-생태탐구-보고서.pdf','application/pdf');}
+
+export function drawLearningWeb(canvas,data){const g=canvas.getContext('2d');canvas.width=1000;canvas.height=540;g.fillStyle='#fffdf4';g.fillRect(0,0,1000,540);const pos={grass:[100,160],grasshopper:[350,160],frog:[600,160],snake:[860,160],hawk:[730,415]};for(const key of data.links){const [a,b]=key.split(':'),s=pos[a],e=pos[b],angle=Math.atan2(e[1]-s[1],e[0]-s[0]);const actual=evidenceFor(data,key).length>0;g.strokeStyle=actual?'#1e7251':'#805a22';g.fillStyle=g.strokeStyle;g.lineWidth=6;g.setLineDash(actual?[]:[12,8]);const sx=s[0]+Math.cos(angle)*75,sy=s[1]+Math.sin(angle)*75,ex=e[0]-Math.cos(angle)*75,ey=e[1]-Math.sin(angle)*75;g.beginPath();g.moveTo(sx,sy);g.lineTo(ex,ey);g.stroke();g.setLineDash([]);g.beginPath();g.moveTo(ex,ey);g.lineTo(ex-22*Math.cos(angle-.45),ey-22*Math.sin(angle-.45));g.lineTo(ex-22*Math.cos(angle+.45),ey-22*Math.sin(angle+.45));g.fill();}for(const [id,[x,y]]of Object.entries(pos)){drawPortrait(g,id,x-60,y-60,120);g.fillStyle='#fffdf4';g.fillRect(x-70,y+68,140,38);g.fillStyle='#173d2b';g.font='bold 26px sans-serif';g.textAlign='center';g.fillText(NAMES[id],x,y+95);}g.textAlign='left';g.font='23px sans-serif';g.fillText('실선: 내 실제 기록',50,400);g.fillText('점선: 모형의 관계',50,440);}

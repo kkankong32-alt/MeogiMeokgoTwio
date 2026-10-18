@@ -1,0 +1,67 @@
+{
+  "tool": "OpenAI built-in image generation",
+  "status": "candidate_not_user_approved",
+  "sourceReference": "/workspace/shared/ecology-game-prep/candidates/gameplay-v04/assets/predator/snake-v01.png",
+  "sourceReferenceSha256": "fab4433b45a1f0825bc99b77e3a5756efa78384300fe559cb7e02a0f6d87cfb4",
+  "prompt": "Use case: precise-object-edit / identity-preserve. Asset type: transparent game sprite replacement HEAD AND SHORT NECK ONLY for the referenced snake. Reference shows the exact existing creature's olive golden-brown scales, dark chocolate irregular spots, soft cream edges, warm brown round eyes, glossy detailed painted-3D style. Preserve its friendly neutral closed-mouth identity, colors and scale texture. Change ONLY the viewing angle to a true orthographic overhead dorsal view, camera straight down at the top of its head and neck. The head points exactly RIGHT, centerline perfectly horizontal. Both eyes visible symmetrically at the upper and lower lateral edges of the head, with the top of the skull occupying most visible area; do NOT show a side-profile face, do NOT draw head looking at viewer, no chin or belly view. One broad rounded natural snake head on the right, smoothly tapering into a short cylindrical straight neck extending LEFT. Draw only head plus short neck, not the full snake, and no body curves. Neck should smoothly join head and maintain constant width on its left half. Neck is roughly 60 percent of maximum head width in the perpendicular direction. At the extreme left, the short neck ends in a softly rounded overlapping attachment cap, painted as ordinary scales, not an exposed cut surface. Composition landscape 3:2 with generous transparent padding on every edge. Subject fills central 75 percent width. Head diameter in the perpendicular direction about 35 percent canvas height. No cropped snout or cropped neck. True clean transparent background without baked shadow. No label, no text, no watermark, no joints, no limbs, no tongue, no fangs, no evil expression, no cobra hood, no alternate views. Avoid heavily directional cast light: retain gentle upper-left highlights so the sprite remains legible when rotated in-plane continuously.",
+  "transparent_background": true,
+  "output": "snake-head-dorsal-v01-raw.png",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "sourcePixelsEdited": false,
+  "alphaChecks": {
+    "visibleBoundsAtAlpha32": [
+      106,
+      280,
+      1435,
+      742
+    ],
+    "transparentPixels": 1177506,
+    "totalPixels": 1572864,
+    "visualComposite": "dorsal-head-alpha-review.png",
+    "note": "Clean native Canvas composite. Some invisible low-alpha fringe far outside visible bounds; optional runtime crop [100,270,1445,755]."
+  },
+  "registration": {
+    "forward": [
+      1,
+      0
+    ],
+    "centerlineY": 510,
+    "headPivot": [
+      1120,
+      511
+    ],
+    "joinCenter": [
+      500,
+      508
+    ],
+    "joinOpaqueEdgesY": [
+      396,
+      620
+    ],
+    "joinWidth": 225,
+    "snoutTip": [
+      1435,
+      510
+    ],
+    "safeHeadCrop": [
+      100,
+      270,
+      1445,
+      755
+    ],
+    "joinOverlapSuggestedSourcePixels": [
+      400,
+      650
+    ],
+    "scaleFormula": "headScale = intendedNeckDiameterScreenPixels / 225",
+    "orientation": "True dorsal view, two visible eyes; rotate continuously rather than mirroring for each horizontal sign."
+  },
+  "integrationGuidance": [
+    "Keep the head rigid. Align the final neck tangent to head orientation before the join; preserve C1 continuity.",
+    "Blend two textures within an overlap along the SAME centerline. Do not interpolate screen-space between an unrelated bent-body point and rigid-head point.",
+    "No changes made to v04/v05 runtime."
+  ]
+}

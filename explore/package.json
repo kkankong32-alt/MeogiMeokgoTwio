@@ -1,0 +1,13 @@
+{
+  "name": "ecology-game-preparation",
+  "version": "0.16.6",
+  "private": true,
+  "type": "module",
+  "description": "Four-role ecology exploration game with optional evidence-based reflection.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check-assets.js && node scripts/check-source.js",
+    "start": "python -m http.server 4781 --bind 127.0.0.1",
+    "build": "node scripts/build-standalone.js"
+  }
+}

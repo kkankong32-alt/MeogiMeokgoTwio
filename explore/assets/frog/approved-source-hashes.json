@@ -1,0 +1,9 @@
+{
+  "scope": "User-approved v03 source motion; originals copied unchanged",
+  "sha256": {
+    "big-leap-proof/v03/big-leap-v03.mjs": "ecb7c3a427be7565b697de2247decc69df4f3bebc75d93373767be8f508c4b32",
+    "big-leap-proof/v02/big-leap-v02.mjs": "f28725a7994743dcf1bd0b5c0bd26eeafa54ecb803423eab8274cb6a04d729e2",
+    "full-motion/full-rig.mjs": "af23eccefe6178dfb6d80505b5649987034e78cf7956bafbc490f235e4e586ca",
+    "rig-math.mjs": "9684ae8ae49ba362b4e21c3fbd12ab586073e40df97e6278abab7fbefab4ec51"
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 1,
+  "projectLabel": "생태 게임 제작",
+  "gameTitle": "먹이 먹고 튀어",
+  "status": "readable-gameplay-review-candidate",
+  "runtimeAssets": [
+    {
+      "id": "entry-title-v03",
+      "path": "assets/title/entry-v03.png",
+      "type": "title-screen",
+      "width": 1664,
+      "height": 936,
+      "bytes": 2656526,
+      "status": "runtime-approved",
+      "approvalScope": "Entry screen v03 only; not creature or environment runtime art",
+      "provenance": "User-approved generated title v03, Library libfile_22561554982081918f575d7d34182cf8",
+      "usageConditions": "Use for this approved ecology game. Source preserved unchanged. No third-party fonts or music added.",
+      "buttonNormalized": {
+        "left": 0.31851,
+        "top": 0.76816,
+        "width": 0.35697,
+        "height": 0.14637
+      },
+      "sha256": "a8c9e3df3c03b1e1ba217a9c648d439a3850342db114f950a764ab34c08b5ce4"
+    },
+    {
+      "id": "frog-atlas-v03",
+      "path": "assets/frog/frog-atlas-runtime-crop-draft.lossless.webp",
+      "type": "frog-rigid-parts",
+      "width": 1997,
+      "height": 1944,
+      "bytes": 2523718,
+      "sha256": "e7db566e504d5b4942644a11fea732df36a0d8484b0a588d641a5a1a880d9224",
+      "status": "runtime-approved",
+      "approvalScope": "User approved v03 jump and v10 tongue on 2026-10-04. Same rigid source pixels and approved source timing; atlas packing is a lossless technical representation. Gameplay/device performance is not approved by this motion approval.",
+      "provenance": "Original generated fixed raster art; frozen v03 and v10 review sources.",
+      "usageConditions": "Use for this ecology game; no redistribution of unrelated material."
+    },
+    {
+      "id": "frog-tongue-v10",
+      "path": "assets/frog/tongue-ribbon.png",
+      "type": "tongue-source",
+      "width": 512,
+      "height": 128,
+      "bytes": 22975,
+      "sha256": "d17b85d6d85c35409413f5b0437d2730bed2070fdfe47f2822237cc476a4e5f0",
+      "status": "runtime-approved",
+      "approvalScope": "User approved v03 jump and v10 tongue on 2026-10-04. Same rigid source pixels and approved source timing; atlas packing is a lossless technical representation. Gameplay/device performance is not approved by this motion approval.",
+      "provenance": "Original generated fixed raster art; frozen v03 and v10 review sources.",
+      "usageConditions": "Use for this ecology game; no redistribution of unrelated material."
+    },
+    {
+      "id": "frog-mouth-cavity",
+      "path": "assets/frog/mouth-interior.png",
+      "type": "mouth-cavity-source",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 300725,
+      "sha256": "58f83adc9d34af5b76f65c0715f8d347dcc8458e904515a6a0ba401571cd441a",
+      "status": "runtime-approved",
+      "approvalScope": "User approved v03 jump and v10 tongue on 2026-10-04. Same rigid source pixels and approved source timing; atlas packing is a lossless technical representation. Gameplay/device performance is not approved by this motion approval.",
+      "provenance": "Original generated fixed raster art; frozen v03 and v10 review sources.",
+      "usageConditions": "Use for this ecology game; no redistribution of unrelated material."
+    }
+  ],
+  "notes": [
+    "Exact approved title retained with functional DOM Start button.",
+    "Approved frog v03 source trajectory/poses and v10 fixed-face tongue timing are unchanged.",
+    "Frog uses uniform source scale 0.16 in gameplay. Grasshopper is uniformly displayed larger than proof prey for legibility.",
+    "Only left/right authored facing exists. Up/down reposition is allowed; walking/directional animations are unfinished.",
+    "Source-pixel navigation matches the unwarped background; water/shoreline is blocked in this pilot.",
+    "Snake is explicitly labeled development geometry. No final game/device FPS claim."
+  ],
+  "requirements": {
+    "entryKeyArt": {
+      "status": "approved-v03",
+      "textPolicy": "Approved baked title kept as artwork; accessible DOM label and actual button provided."
+    },
+    "frogSheets": {
+      "status": "approved-rigid-atlas-v03-v10-integrated",
+      "format": "13 fixed crop parts, exact base transforms/joints/draw order; no sprite-sheet cell assumptions"
+    },
+    "grasshopperSheets": {
+      "status": "pilot-static-candidate"
+    },
+    "snakeSheets": {
+      "status": "pending"
+    },
+    "environmentLayers": {
+      "status": "pilot-candidate",
+      "layers": [
+        "ground",
+        "water",
+        "props",
+        "foreground"
+      ]
+    }
+  },
+  "developmentAssets": [
+    {
+      "id": "zone01-ground",
+      "path": "assets/environment/zone01-ground-v01.png",
+      "type": "environment",
+      "width": 1672,
+      "height": 941,
+      "bytes": 3330214,
+      "sha256": "03cd5682ea38fb4ed822cc9a6816907018f8134da73376a037a71fdaddee3153",
+      "status": "pilot-review-candidate",
+      "approvalScope": "Authorized pilot integration with current background and static prey; no separate final art/device-performance approval claimed.",
+      "provenance": "Original generated runtime-batch-v01 art, visually reviewed on the actual pilot canvas.",
+      "usageConditions": "Internal/private pilot only; keep candidate status visible."
+    },
+    {
+      "id": "grasshopper-static",
+      "path": "assets/prey/grasshopper-v01.png",
+      "type": "prey-static",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1246745,
+      "sha256": "eb1ade1e3c16364ba21c29bfc699136f94b65558fc1bd318c8c33ec6bdd2aa71",
+      "status": "pilot-review-candidate",
+      "approvalScope": "User accepted the v05 prey appearance and 1.7x size on 2026-10-04. Preserve this visual scope; no actual-device-performance approval claimed.",
+      "provenance": "Original generated runtime-batch-v01 art, visually reviewed on the actual pilot canvas.",
+      "usageConditions": "Internal/private pilot only; keep candidate status visible."
+    },
+    {
+      "id": "snake-raster-v01",
+      "path": "assets/predator/snake-v01.png",
+      "type": "predator-raster",
+      "width": 2172,
+      "height": 724,
+      "bytes": 544803,
+      "sha256": "fab4433b45a1f0825bc99b77e3a5756efa78384300fe559cb7e02a0f6d87cfb4",
+      "status": "pilot-review-candidate",
+      "approvalScope": "Unchanged original raster mapped as long 1100-unit near-uniform 44px torso with measured alpha-width normalization and torso UV repeat. Terminal taper only. Head-only gameplay collision. Awaiting v06 visual approval.",
+      "provenance": "Generated golden olive snake source from prey-predator-v01; source SHA256 fab4433b45a1f0825bc99b77e3a5756efa78384300fe559cb7e02a0f6d87cfb4",
+      "usageConditions": "For this private ecology-game candidate; no public release."
+    },
+    {
+      "id": "snake-head-dorsal-v01",
+      "path": "assets/predator/snake-head-dorsal-v01.png",
+      "type": "predator-head-raster",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1629577,
+      "sha256": "b5f6b248b3b364963dac3f1b90b600747600d5baf4b380128be4e428870ed1a7",
+      "status": "pilot-review-candidate",
+      "approvalScope": "Existing dorsal head raster retained; independently scaled to .105 with x940 crop for near-uniform body connection. Continuous rotation, no heading sign flip. Awaiting v06 visual approval.",
+      "provenance": "Imagegen authored 2026-10-04 using golden snake v01 source reference. No original source raster overwritten.",
+      "usageConditions": "Private ecology-game review only; no public release."
+    },
+    {
+      "id": "controls-guide-v080",
+      "path": "assets/ui/controls-v080.png",
+      "type": "illustrated-controls",
+      "width": 2172,
+      "height": 724,
+      "bytes": 1618401,
+      "sha256": "2afb12755137fe5aa32cb4a67569f573c49045192b1ba0bd264133b3ded9eff2",
+      "status": "pilot-review-candidate",
+      "approvalScope": "User requested generated instruction art; integrated candidate for review.",
+      "provenance": "Built-in image_gen, 2026-10-16, original title used as style reference; prompt in assets/ui/generation-prompt.txt",
+      "usageConditions": "Generated for this game. Captions rendered separately in HTML. Existing artwork unchanged."
+    },
+    {
+      "id": "controls-full-v091",
+      "path": "assets/ui/controls-full-v091.png",
+      "type": "complete-image-ui",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2152757,
+      "sha256": "2bbab75eedc3a1e1d750b855b64292d1338606f64ccf75ee83431eaa8d2009d2",
+      "status": "pilot-review-candidate",
+      "approvalScope": "User explicitly requested full raster instructions and image menu buttons; generated integration candidate.",
+      "provenance": "Built-in image_gen targeted Hangul repair. assets/ui/prompt-v091.txt",
+      "usageConditions": "Generated for this private educational game; no third-party fonts, sounds or external runtime services added."
+    },
+    {
+      "id": "story-full-v092",
+      "path": "assets/ui/story-full-v092.png",
+      "type": "complete-image-ui",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2486880,
+      "sha256": "0fc6841c32a9ac55d7ec9def6257565d4909130cdc2be364cfa284ec0d5de0c2",
+      "status": "pilot-review-candidate",
+      "approvalScope": "User explicitly requested full raster instructions and image menu buttons; generated integration candidate.",
+      "provenance": "Built-in image_gen local illustration repair. assets/ui/prompt-v092.txt",
+      "usageConditions": "Generated for this private educational game; no third-party fonts, sounds or external runtime services added."
+    },
+    {
+      "id": "menu-buttons-v090",
+      "path": "assets/ui/menu-buttons-v090.png",
+      "type": "complete-image-ui",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2120065,
+      "sha256": "4b2c8a8e21c2fd179cc9359812effd285cc639825d0a1d81f9e04b92801f6de0",
+      "status": "pilot-review-candidate",
+      "approvalScope": "User explicitly requested full raster instructions and image menu buttons; generated integration candidate.",
+      "provenance": "Built-in image_gen. Exact prompt set: assets/ui/prompts-v090.json",
+      "usageConditions": "Generated for this private educational game; no third-party fonts, sounds or external runtime services added."
+    },
+    {
+      "id": "frog-directions-v010",
+      "path": "assets/frog/directions-v010.png",
+      "type": "directional-frog-sprites",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1442792,
+      "sha256": "73aaf041e80d7576b72294b9a45f3f10d8c67774332e4f01b5080bf7c6742fba",
+      "status": "pilot-review-candidate",
+      "provenance": "OpenAI built-in imagegen, 2026-10-16; original game screenshot used as character reference; generated PNG alpha preserved.",
+      "usageConditions": "Local ecology game candidate; not user-approved art.",
+      "approvalScope": "Directional sprite candidate for this user-requested local revision; awaiting visual review."
+    },
+    {
+      "id": "edible-grass-v011",
+      "path": "assets/environment/edible-grass-v011.png",
+      "status": "pilot-review-candidate",
+      "approvalScope": "New grasshopper chapter art for private user review; not yet user approved",
+      "bytes": 2010502,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "4f05b831a00a81152875002e991a35be40050c1cb81c11b49d32515fab95db72",
+      "provenance": "OpenAI built-in image_gen, 2026-10-16; prompt in assets/environment/edible-grass-v011-prompt.txt",
+      "usageConditions": "Generated project art. Private game use; preserve original and provenance."
+    },
+    {
+      "id": "hopper-controls-v011",
+      "path": "assets/ui/hopper-controls-v011.png",
+      "status": "pilot-review-candidate",
+      "approvalScope": "Grasshopper chapter instruction image for private user review",
+      "bytes": 2446354,
+      "width": 1672,
+      "height": 941,
+      "sha256": "8965233d5b5b3e7299ff01bab4ca0f25c57eec6c1b527e06c9b7d302dd240ce8",
+      "provenance": "OpenAI built-in image_gen, 2026-10-16; assets/ui/hopper-controls-v011-prompt.txt",
+      "usageConditions": "Generated project art, private game review; preserve provenance."
+    },
+    {
+      "id": "hopper-story-v011",
+      "path": "assets/ui/hopper-story-v011.png",
+      "status": "pilot-review-candidate",
+      "approvalScope": "Grasshopper chapter instruction image for private user review",
+      "bytes": 2615807,
+      "width": 1672,
+      "height": 941,
+      "sha256": "4c17f6f7c4e46bb5f3c80e155fd34740b22f7f64e746e7cf229493ab5a391c9a",
+      "provenance": "OpenAI built-in image_gen, 2026-10-16; assets/ui/hopper-story-v011-prompt.txt",
+      "usageConditions": "Generated project art, private game review; preserve provenance."
+    },
+    {
+      "id": "role-menu-v0111",
+      "path": "assets/title/role-menu-v0111.png",
+      "status": "pilot-review-candidate",
+      "approvalScope": "User-requested image-only role menu, pending visual review",
+      "bytes": 2714781,
+      "width": 1672,
+      "height": 941,
+      "sha256": "ab07d5f06c26a44e8e8109e96ef735dae2716491e3f76cded7c0b3189b18de0c",
+      "provenance": "Built-in image_gen; final prompt assets/title/role-menu-v0111-prompt.txt",
+      "usageConditions": "Generated game menu, local private review. Preserve provenance."
+    },
+    {
+      "id": "research-v012",
+      "path": "assets/ui/research-v012.png",
+      "status": "pilot-review-candidate",
+      "approvalScope": "New v0.12 research illustration awaiting user visual review; prior approved main menu preserved",
+      "provenance": "Built-in image_gen; prompt: assets/ui/research-v012-prompt.txt",
+      "usageConditions": "Generated for this local educational game; no external stock assets used",
+      "bytes": 2586478,
+      "sha256": "f4c6b7b2896e4931a524c4c737c6a1f24bc5028f3e943f8ab9951c5ced430cd2",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "id": "role-menu-v013",
+      "path": "assets/title/role-menu-v013.png",
+      "status": "pilot-review-candidate",
+      "approvalScope": "v0.13 user review candidate; original assets preserved",
+      "provenance": "Built-in image_gen; adjacent -prompt.txt retained",
+      "usageConditions": "Generated for local educational game; no public deployment",
+      "bytes": 2738286,
+      "sha256": "e636a2148cd5158287a5bd34babf61b169b91240541c8b8d3ca303542dd7f703",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "id": "hawk-v013",
+      "path": "assets/predator/hawk-v013.png",
+      "status": "pilot-review-candidate",
+      "approvalScope": "v0.13 user review candidate; original assets preserved",
+      "provenance": "Built-in image_gen; adjacent -prompt.txt retained",
+      "usageConditions": "Generated for local educational game; no public deployment",
+      "bytes": 1743257,
+      "sha256": "da2ca65a85a27d14fab4e6ad7a9b724cb1f26329912077264840ebfce19fd688",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "snake-guide-v013",
+      "path": "assets/ui/snake-guide-v013.png",
+      "status": "pilot-review-candidate",
+      "approvalScope": "v0.13 user review candidate; original assets preserved",
+      "provenance": "Built-in image_gen; adjacent -prompt.txt retained",
+      "usageConditions": "Generated for local educational game; no public deployment",
+      "bytes": 2631197,
+      "sha256": "7e70d13bdc75926f9db27a903cd2ff999556623cb9324113ab360a6daa746a33",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "id": "snake-bite-v0133-02",
+      "path": "assets/predator/snake-bite-v0133-02.png",
+      "type": "bite-head",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2006574,
+      "sha256": "4100a79461d4f31722ca366d46760445c2cb95d8c6f4dfa40e676a0ff97f2768",
+      "status": "pilot-review-candidate",
+      "approvalScope": "Corrected single-visible-eye wide-open side-view bite; new review candidate. First two-eye candidate rejected and unused.",
+      "provenance": "Built-in image_gen edit of project snake-head-dorsal-v01.png",
+      "usageConditions": "Generated for this local educational game; no external music or services required."
+    },
+    {
+      "id": "role-menu-v0141",
+      "path": "assets/title/role-menu-v0141.png",
+      "type": "hawk-play-art",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2760702,
+      "sha256": "81dc7d339ba659d85c414a3a6b06a7d3c516be68add39e0e4ab98767779cab20",
+      "status": "pilot-review-candidate",
+      "approvalScope": "New hawk role review version; prior approved art retained",
+      "provenance": "Built-in image_gen; prompt qa/role-menu-v0141-prompt.txt; reference v0.14.0 menu; swapped first two role cards",
+      "usageConditions": "Generated for this local educational game; not publicly deployed."
+    },
+    {
+      "id": "hawk-guide-v014",
+      "path": "assets/ui/hawk-guide-v014.png",
+      "type": "hawk-play-art",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2665422,
+      "sha256": "66bf26399988c089a5b2c70fd0e699f8e35cd0c90b9d95f25b9d30b5007f37af",
+      "status": "pilot-review-candidate",
+      "approvalScope": "New hawk role review version; prior approved art retained",
+      "provenance": "Built-in image_gen; exact prompt in qa/hawk-guide-v014-prompt.txt",
+      "usageConditions": "Generated for this local educational game; not publicly deployed."
+    },
+    {
+      "id": "hawk-dive-v014",
+      "path": "assets/predator/hawk-dive-v014.png",
+      "type": "hawk-play-art",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1263770,
+      "sha256": "736251ab3e9fe95160799f8a15458a291858607acbee6f936187e072bce617e7",
+      "status": "pilot-review-candidate",
+      "approvalScope": "New hawk role review version; prior approved art retained",
+      "provenance": "Built-in image_gen; exact prompt in qa/hawk-dive-v014-prompt.txt",
+      "usageConditions": "Generated for this local educational game; not publicly deployed."
+    }
+  ],
+  "candidateNotes": "Frog/title assets and approved frog/prey animation and v05 prey 1.7x scale retained. v06 snake actual same-zoom length 2.13x v05, near-uniform 44px body, terminal-only tail taper, separate smaller dorsal head and measured raster UV profile. Snake remains a review candidate."
+}

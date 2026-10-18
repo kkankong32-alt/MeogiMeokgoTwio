@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "arrowDirection": "food-to-eater",
+  "speciesStatus": "generalized textbook roles; exact species not approved",
+  "actionModel": {
+    "source": "textbook page 49",
+    "sourceUrl": "https://drive.google.com/file/d/1AYbSN7guM6pRCPoZVU3IQzuy3_B3oXCY/view",
+    "edges": [
+      [
+        "grass",
+        "grasshopper"
+      ],
+      [
+        "grasshopper",
+        "frog"
+      ],
+      [
+        "frog",
+        "snake"
+      ],
+      [
+        "frog",
+        "hawk"
+      ],
+      [
+        "snake",
+        "hawk"
+      ]
+    ],
+    "verification": "2026-10-17: checked arrows in local work/textbook49.png; game only represents a subset."
+  },
+  "comparisonModel": {
+    "source": "workbook pages 25 and 34; separate from action model",
+    "sourceUrl": "https://drive.google.com/file/d/1QchOAhIc8LXqeKrASq7zxK9VYkNS5wN3/view",
+    "nodes": [
+      "산수유",
+      "토끼풀",
+      "애벌레",
+      "직박구리",
+      "개구리",
+      "오리",
+      "토끼",
+      "족제비",
+      "매"
+    ],
+    "simpleEdges": [
+      [
+        "토끼풀",
+        "애벌레"
+      ],
+      [
+        "애벌레",
+        "개구리"
+      ],
+      [
+        "개구리",
+        "매"
+      ]
+    ],
+    "edges": [
+      [
+        "산수유",
+        "직박구리"
+      ],
+      [
+        "산수유",
+        "애벌레"
+      ],
+      [
+        "토끼풀",
+        "애벌레"
+      ],
+      [
+        "토끼풀",
+        "오리"
+      ],
+      [
+        "토끼풀",
+        "토끼"
+      ],
+      [
+        "애벌레",
+        "직박구리"
+      ],
+      [
+        "애벌레",
+        "개구리"
+      ],
+      [
+        "애벌레",
+        "오리"
+      ],
+      [
+        "직박구리",
+        "매"
+      ],
+      [
+        "직박구리",
+        "족제비"
+      ],
+      [
+        "개구리",
+        "매"
+      ],
+      [
+        "개구리",
+        "족제비"
+      ],
+      [
+        "개구리",
+        "오리"
+      ],
+      [
+        "오리",
+        "매"
+      ],
+      [
+        "오리",
+        "족제비"
+      ],
+      [
+        "토끼",
+        "족제비"
+      ],
+      [
+        "족제비",
+        "매"
+      ]
+    ],
+    "status": "data fixture only; comparison lesson not implemented"
+  }
+}

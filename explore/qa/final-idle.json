@@ -1,0 +1,166 @@
+[
+  {
+    "role": "frog",
+    "rows": [
+      {
+        "seed": 1,
+        "status": "caught",
+        "time": 3.77,
+        "food": 0
+      },
+      {
+        "seed": 7,
+        "status": "caught",
+        "time": 3.77,
+        "food": 0
+      },
+      {
+        "seed": 17,
+        "status": "caught",
+        "time": 3.77,
+        "food": 0
+      },
+      {
+        "seed": 49,
+        "status": "caught",
+        "time": 3.77,
+        "food": 0
+      },
+      {
+        "seed": 101,
+        "status": "caught",
+        "time": 3.77,
+        "food": 0
+      },
+      {
+        "seed": 2026,
+        "status": "caught",
+        "time": 3.77,
+        "food": 0
+      }
+    ]
+  },
+  {
+    "role": "grasshopper",
+    "rows": [
+      {
+        "seed": 1,
+        "status": "caught",
+        "time": 10.78,
+        "food": 0
+      },
+      {
+        "seed": 7,
+        "status": "caught",
+        "time": 8.03,
+        "food": 0
+      },
+      {
+        "seed": 17,
+        "status": "caught",
+        "time": 10.97,
+        "food": 0
+      },
+      {
+        "seed": 49,
+        "status": "caught",
+        "time": 8.3,
+        "food": 0
+      },
+      {
+        "seed": 101,
+        "status": "caught",
+        "time": 8.02,
+        "food": 0
+      },
+      {
+        "seed": 2026,
+        "status": "caught",
+        "time": 10.37,
+        "food": 0
+      }
+    ]
+  },
+  {
+    "role": "snake",
+    "rows": [
+      {
+        "seed": 1,
+        "status": "caught",
+        "time": 7.07,
+        "food": 0
+      },
+      {
+        "seed": 7,
+        "status": "caught",
+        "time": 7.07,
+        "food": 0
+      },
+      {
+        "seed": 17,
+        "status": "caught",
+        "time": 7.07,
+        "food": 0
+      },
+      {
+        "seed": 49,
+        "status": "caught",
+        "time": 7.07,
+        "food": 0
+      },
+      {
+        "seed": 101,
+        "status": "caught",
+        "time": 7.07,
+        "food": 0
+      },
+      {
+        "seed": 2026,
+        "status": "caught",
+        "time": 7.07,
+        "food": 0
+      }
+    ]
+  },
+  {
+    "role": "hawk",
+    "rows": [
+      {
+        "seed": 1,
+        "status": "survived",
+        "time": 90.02,
+        "food": 0
+      },
+      {
+        "seed": 7,
+        "status": "survived",
+        "time": 90.02,
+        "food": 0
+      },
+      {
+        "seed": 17,
+        "status": "survived",
+        "time": 90.02,
+        "food": 0
+      },
+      {
+        "seed": 49,
+        "status": "survived",
+        "time": 90.02,
+        "food": 0
+      },
+      {
+        "seed": 101,
+        "status": "survived",
+        "time": 90.02,
+        "food": 0
+      },
+      {
+        "seed": 2026,
+        "status": "survived",
+        "time": 90.02,
+        "food": 0
+      }
+    ]
+  }
+]
