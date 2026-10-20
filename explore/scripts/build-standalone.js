@@ -19,7 +19,7 @@ new vm.Script(code);
 function embedded(file){const bytes=fs.readFileSync(path.join(root,file));return `data:image/${file.endsWith('.webp')?'webp':'png'};base64,${bytes.toString('base64')}`;}
 const css=fs.readFileSync(path.join(root,'style.css'),'utf8').replace(/assets\/[\w/.-]+\.(?:png|webp)/g,file=>embedded(file));
 let html=fs.readFileSync(path.join(root,'index.html'),'utf8')
- .replace('<link rel="stylesheet" href="style.css">',`<style>${css}</style>`)
+ .replace(/<link rel="stylesheet" href="style\.css(?:\?[^"]*)?">/,`<style>${css}</style>`)
  .replace(/src="(assets\/[^"\n]+)"/g,(_,file)=>`src="${embedded(file)}"`)
  .replace('<script type="module" src="src/main.js"></script>',()=>`<script id="game-code">${code.replaceAll('</script','<\\/script')}</script>`);
 fs.writeFileSync(out,html);fs.writeFileSync(path.join(root,'qa/standalone-build.json'),JSON.stringify({type:'single-HTML classic-script build; all same source art embedded unchanged',bytes:Buffer.byteLength(html),modules:records,sha256:crypto.createHash('sha256').update(html).digest('hex'),networkRequestsRequired:false},null,2)+'\n');console.log(`Built ${out}: ${Buffer.byteLength(html)} bytes, ${modules.size} modules`);
