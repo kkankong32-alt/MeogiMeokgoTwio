@@ -281,3 +281,9 @@ body:has(#game:not([hidden])) #fullscreen-toggle{top:auto;bottom:max(3px,var(--s
 /* Keep readable contrast on species-card hover and selection. */
 #dialog-content .simple-species button:hover{background-color:#e2edce;color:#184331}
 #dialog-content .simple-species button[aria-pressed=true]{background-color:#fff2c9;color:#184331}
+
+/* Reserve a readable credit row without covering the illustrated menu. */
+#entry{gap:0}
+#entry .creator-credit{flex:none;height:32px;margin:0;padding:6px 12px;color:#f4f0d9;background:#10251f;width:100%;text-align:center;font-size:14px;line-height:20px}
+#entry .entry-art{max-width:calc((var(--app-height) - 32px - var(--safe-top) - var(--safe-bottom))*1672/941)}
+@media(orientation:portrait){#entry .entry-art{height:calc(100% - 32px);max-width:none;--card-h:min(calc((var(--app-height) - 282px - var(--safe-top) - var(--safe-bottom))/2),calc((var(--app-width) - 30px)/1.72))}}

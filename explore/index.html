@@ -7,6 +7,21 @@
   <meta name="theme-color" content="#142c23">
   <title>먹이 먹고 튀어 · 네 생물 탐험</title>
   <link rel="stylesheet" href="style.css">
+<!-- Usage analytics: 쓰로인훈쌤 / 킹수학. Local and offline previews are excluded. -->
+<script>
+(function () {
+  if (location.hostname !== 'kkankong32-alt.github.io') return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', 'G-DC7N6KQBG0');
+  gtag('config', 'G-5YW0T2C109');
+  var tag = document.createElement('script');
+  tag.async = true;
+  tag.src = 'https://www.googletagmanager.com/gtag/js?id=G-DC7N6KQBG0';
+  document.head.appendChild(tag);
+})();
+</script>
 </head>
 <body>
   <button id="fullscreen-toggle" aria-label="전체화면으로 보기" title="전체화면으로 보기">⛶</button>
@@ -23,6 +38,7 @@
         <button id="entry-controls" class="menu-hotspot" aria-label="조작방법 보기"><span class="sr-only">조작방법</span></button>
         <button id="entry-story" class="menu-hotspot" aria-label="게임설명 보기"><span class="sr-only">게임설명</span></button>
       </div>
+      <p class="creator-credit">기획·제작: 쓰로인훈쌤 김종훈</p>
       <p id="chapter-hint" class="sr-only">이번엔 내가 먹이! 풀을 뜯고 개구리의 혀를 피해요.</p>
       <p id="asset-status" class="sr-only" role="status">그림 준비 중</p><button id="retry-assets" hidden>그림 다시 불러오기</button>
     </section>

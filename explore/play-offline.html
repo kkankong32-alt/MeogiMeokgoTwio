@@ -289,7 +289,28 @@ body:has(#game:not([hidden])) #fullscreen-toggle{top:auto;bottom:max(3px,var(--s
 /* Keep readable contrast on species-card hover and selection. */
 #dialog-content .simple-species button:hover{background-color:#e2edce;color:#184331}
 #dialog-content .simple-species button[aria-pressed=true]{background-color:#fff2c9;color:#184331}
+
+/* Reserve a readable credit row without covering the illustrated menu. */
+#entry{gap:0}
+#entry .creator-credit{flex:none;height:32px;margin:0;padding:6px 12px;color:#f4f0d9;background:#10251f;width:100%;text-align:center;font-size:14px;line-height:20px}
+#entry .entry-art{max-width:calc((var(--app-height) - 32px - var(--safe-top) - var(--safe-bottom))*1672/941)}
+@media(orientation:portrait){#entry .entry-art{height:calc(100% - 32px);max-width:none;--card-h:min(calc((var(--app-height) - 282px - var(--safe-top) - var(--safe-bottom))/2),calc((var(--app-width) - 30px)/1.72))}}
 </style>
+<!-- Usage analytics: 쓰로인훈쌤 / 킹수학. Local and offline previews are excluded. -->
+<script>
+(function () {
+  if (location.hostname !== 'kkankong32-alt.github.io') return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', 'G-DC7N6KQBG0');
+  gtag('config', 'G-5YW0T2C109');
+  var tag = document.createElement('script');
+  tag.async = true;
+  tag.src = 'https://www.googletagmanager.com/gtag/js?id=G-DC7N6KQBG0';
+  document.head.appendChild(tag);
+})();
+</script>
 </head>
 <body>
   <button id="fullscreen-toggle" aria-label="전체화면으로 보기" title="전체화면으로 보기">⛶</button>
@@ -306,6 +327,7 @@ body:has(#game:not([hidden])) #fullscreen-toggle{top:auto;bottom:max(3px,var(--s
         <button id="entry-controls" class="menu-hotspot" aria-label="조작방법 보기"><span class="sr-only">조작방법</span></button>
         <button id="entry-story" class="menu-hotspot" aria-label="게임설명 보기"><span class="sr-only">게임설명</span></button>
       </div>
+      <p class="creator-credit">기획·제작: 쓰로인훈쌤 김종훈</p>
       <p id="chapter-hint" class="sr-only">이번엔 내가 먹이! 풀을 뜯고 개구리의 혀를 피해요.</p>
       <p id="asset-status" class="sr-only" role="status">그림 준비 중</p><button id="retry-assets" hidden>그림 다시 불러오기</button>
     </section>

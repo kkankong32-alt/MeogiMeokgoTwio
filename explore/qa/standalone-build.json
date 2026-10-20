@@ -1,6 +1,6 @@
 {
   "type": "single-HTML classic-script build; all same source art embedded unchanged",
-  "bytes": 93520044,
+  "bytes": 93521296,
   "modules": [
     {
       "path": "src\\portfolio.js",
@@ -159,6 +159,6 @@
       "sha256": "8c596ea92a21fb9066595a3d2a5bdab4583edd7183313d9fe9c6ea55b2dcfa5b"
     }
   ],
-  "sha256": "25180a2517c4a703abc3f8ae6e7e3dc5016109c79d12c986c4a4f6455b052ea6",
+  "sha256": "c049fa9ed721ffec7f29c70265a8959ccac380e099a1489ae001048f758b06a4",
   "networkRequestsRequired": false
 }
